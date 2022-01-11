@@ -93,7 +93,7 @@ namespace WinFormsAppGipTesting
             this.btnAdminPanel.Name = "btnAdminPanel";
             this.btnAdminPanel.Size = new System.Drawing.Size(100, 35);
             this.btnAdminPanel.TabIndex = 5;
-            this.btnAdminPanel.Text = "Admin Panel";
+            this.btnAdminPanel.Text = "Admin panel";
             this.btnAdminPanel.UseVisualStyleBackColor = true;
             this.btnAdminPanel.Click += new System.EventHandler(this.btnAdminPanel_Click);
             // 
