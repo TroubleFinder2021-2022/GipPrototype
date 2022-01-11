@@ -31,8 +31,8 @@ namespace WinFormsAppGipTesting
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.label2 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -54,13 +54,6 @@ namespace WinFormsAppGipTesting
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(10, 84);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(150, 200);
-            this.treeView1.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -71,13 +64,22 @@ namespace WinFormsAppGipTesting
             this.label2.TabIndex = 3;
             this.label2.Text = "Hardware";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(13, 85);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(150, 199);
+            this.listBox1.TabIndex = 4;
+            // 
             // FormHardwareIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "FormHardwareIndex";
@@ -91,7 +93,7 @@ namespace WinFormsAppGipTesting
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
