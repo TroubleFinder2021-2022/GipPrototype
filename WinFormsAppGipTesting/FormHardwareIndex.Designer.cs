@@ -84,6 +84,7 @@ namespace WinFormsAppGipTesting
             this.Controls.Add(this.label1);
             this.Name = "FormHardwareIndex";
             this.Text = "FormHardwareIndex";
+            this.Load += new System.EventHandler(this.FormHardwareIndex_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

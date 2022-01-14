@@ -6,8 +6,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Configuration;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 namespace WinFormsAppGipTesting
 {
@@ -27,28 +25,7 @@ namespace WinFormsAppGipTesting
 
         private void FormAdminPanelMain_Load(object sender, EventArgs e)
         {
-            dataGridViewAdminAccounts.DataSource = GetAdminAccounts();
-        }
-
-        private DataTable GetAdminAccounts()
-        {
-            DataTable dtAdminAcounts = new DataTable();
-
-            string connString = ConfigurationManager.ConnectionStrings["dbx"].ConnectionString;
-
-            using (MySqlConnection con = new MySqlConnection(connString))
-            {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbladminaccounts", con))
-                {
-                    con.Open();
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    dtAdminAcounts.Load(reader);
-                }
-            }
-
-            return dtAdminAcounts;
+            //dataGridViewAdminAccounts.DataSource = data
         }
     }
 }

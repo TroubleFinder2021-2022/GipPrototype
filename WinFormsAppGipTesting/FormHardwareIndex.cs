@@ -21,5 +21,10 @@ namespace WinFormsAppGipTesting
             Index.Show();
             this.Close();
         }
+
+        private void FormHardwareIndex_Load(object sender, EventArgs e)
+        {
+            //listbox1 gets filled with data from db
+        }
     }
 }
