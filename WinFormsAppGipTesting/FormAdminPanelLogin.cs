@@ -11,19 +11,14 @@ namespace WinFormsAppGipTesting
 {
     public partial class FormAdminPanelLogin : Form
     {
+        MySqlConnection con;
+        MySqlCommand cmd;
+        MySqlDataReader dr;
+
         public FormAdminPanelLogin()
         {
             InitializeComponent();
-
-            /*
-            AdminAccounts Account1 = new AdminAccounts();
-            Account1.strUsername = "ilias";
-            Account1.strPassword = "snor123";
-
-            AdminAccounts Account2 = new AdminAccounts();
-            Account2.strUsername = "loïc";
-            Account2.strPassword = "snor123";
-            */
+            con = new MySqlConnection("server=84.198.150.18;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder");
 
         }
 
@@ -37,21 +32,26 @@ namespace WinFormsAppGipTesting
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //AdminAccounts.Login();
+            string strUsername = txtUsername.Text;
+            string strPassword = txtPassword.Text;
+            cmd = new MySqlCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = $"SELECT * FROM AdminAccounts WHERE AdminUsername='{strUsername}' AND AdminPassword='{strPassword}'";
+            dr = cmd.ExecuteReader();
+            if (dr.Read()) 
+            {
+                MessageBox.Show($"Login sucess, welcome {strUsername}.");
 
-            
-            FormAdminPanelMain FormAdminMain = new FormAdminPanelMain();
-            FormAdminMain.Show();
-            this.Close();
-            
-            /*
-            string strConnectionString = "server=localhost;user id=root;database=gip,password=Snor123";
-            string strQuery = "";
-            MySqlConnection objConnection = new MySqlConnection(strConnectionString);
-
-            objConnection.Open();
-            */
-            
-
+                FormAdminPanelMain FormAdminMain = new FormAdminPanelMain();
+                FormAdminMain.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show($"Invalid Login please check username and password");
+            }
+            con.Close();
         }
     }
 }

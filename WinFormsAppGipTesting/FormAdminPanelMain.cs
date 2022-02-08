@@ -15,6 +15,9 @@ namespace WinFormsAppGipTesting
         public FormAdminPanelMain()
         {   
             InitializeComponent();
+            
+            //Setting connection string
+            con.ConnectionString = "server=84.198.150.18;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
         }
 
         //initialising sql classes
@@ -32,9 +35,6 @@ namespace WinFormsAppGipTesting
 
         private void FormAdminPanelMain_Load(object sender, EventArgs e)
         {
-            //Setting connection string
-            con.ConnectionString = "server=mysql.sintcordula.be;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
-
             string strQuery;
             try
             {
@@ -65,8 +65,20 @@ namespace WinFormsAppGipTesting
                 da.Dispose();
                 con.Close();
             }
+        }
 
-            
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormAdminPanelNewSolution FormAdminPanelNewSolution = new FormAdminPanelNewSolution();
+            FormAdminPanelNewSolution.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormAdminPanelLogin FormAdminLogin = new FormAdminPanelLogin();
+            FormAdminLogin.Show();
+            this.Close();
         }
     }
 }
