@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WinFormsAppGipTesting
 {
@@ -36,11 +37,21 @@ namespace WinFormsAppGipTesting
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //AdminAccounts.Login();
-            dbConnection.DbConnection();
 
+            
             FormAdminPanelMain FormAdminMain = new FormAdminPanelMain();
             FormAdminMain.Show();
             this.Close();
+            
+            /*
+            string strConnectionString = "server=localhost;user id=root;database=gip,password=Snor123";
+            string strQuery = "";
+            MySqlConnection objConnection = new MySqlConnection(strConnectionString);
+
+            objConnection.Open();
+            */
+            
+
         }
     }
 }
