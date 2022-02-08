@@ -42,14 +42,15 @@ namespace WinFormsAppGipTesting
                 strQuery = "SELECT * FROM AdminAccounts";
                 
                 cmd = new MySqlCommand();
+                //hold the data to be executed.
                 cmd.Connection = con;
                 cmd.CommandText = strQuery;
-
+                //initialize new Sql data adapter
                 da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
-
+                //initialize new datatable
                 dt = new DataTable();
-
+                //refreshes the rows in specified range in the datasource. 
                 da.Fill(dt);
 
                 dataGridViewAdminAccounts.DataSource = dt;
