@@ -15,9 +15,11 @@ namespace WinFormsAppGipTesting
         public FormIndex()
         {
             InitializeComponent();
+            
         }
         private void FormIndex_Load(object sender, EventArgs e)
         {
+            
         }
 
         private void btnHardware_Click(object sender, EventArgs e)

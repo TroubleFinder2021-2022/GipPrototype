@@ -16,13 +16,19 @@ namespace WinFormsAppGipTesting
         {   
             InitializeComponent();
             con.ConnectionString = "server=84.198.150.18;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
+
+            MySqlCommand cmd = new MySqlCommand();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
         }
 
         //initialising sql classes
+
         MySqlConnection con = new MySqlConnection();
         MySqlCommand cmd = new MySqlCommand();
         MySqlDataAdapter da = new MySqlDataAdapter();
         DataTable dt = new DataTable();
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -55,6 +61,7 @@ namespace WinFormsAppGipTesting
             con.Close();
 
             //DISPLAYS ALL SOLUTIONS
+
             string strQuery2 = "SELECT * FROM solutions;"; ;
 
             con.Open();
@@ -70,6 +77,8 @@ namespace WinFormsAppGipTesting
 
             da.Dispose();
             con.Close();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
