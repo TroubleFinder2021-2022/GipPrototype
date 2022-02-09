@@ -54,6 +54,8 @@ namespace WinFormsAppGipTesting
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -77,7 +79,7 @@ namespace WinFormsAppGipTesting
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(359, 144);
+            this.textBox4.Location = new System.Drawing.Point(409, 144);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(256, 23);
             this.textBox4.TabIndex = 48;
@@ -85,7 +87,7 @@ namespace WinFormsAppGipTesting
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(357, 126);
+            this.label9.Location = new System.Drawing.Point(407, 126);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 15);
             this.label9.TabIndex = 47;
@@ -94,7 +96,7 @@ namespace WinFormsAppGipTesting
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(490, 235);
+            this.comboBox3.Location = new System.Drawing.Point(409, 235);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 23);
             this.comboBox3.TabIndex = 46;
@@ -102,22 +104,22 @@ namespace WinFormsAppGipTesting
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(357, 235);
+            this.comboBox4.Location = new System.Drawing.Point(543, 235);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 23);
             this.comboBox4.TabIndex = 45;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(359, 290);
+            this.textBox5.Location = new System.Drawing.Point(409, 290);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(254, 139);
+            this.textBox5.Size = new System.Drawing.Size(255, 110);
             this.textBox5.TabIndex = 44;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(358, 189);
+            this.textBox6.Location = new System.Drawing.Point(408, 189);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(256, 23);
             this.textBox6.TabIndex = 43;
@@ -125,7 +127,7 @@ namespace WinFormsAppGipTesting
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(490, 216);
+            this.label10.Location = new System.Drawing.Point(540, 216);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(123, 15);
             this.label10.TabIndex = 42;
@@ -134,7 +136,7 @@ namespace WinFormsAppGipTesting
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(357, 272);
+            this.label11.Location = new System.Drawing.Point(407, 272);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 15);
             this.label11.TabIndex = 41;
@@ -143,7 +145,7 @@ namespace WinFormsAppGipTesting
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(357, 216);
+            this.label12.Location = new System.Drawing.Point(407, 216);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(104, 15);
             this.label12.TabIndex = 40;
@@ -152,7 +154,7 @@ namespace WinFormsAppGipTesting
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(359, 171);
+            this.label13.Location = new System.Drawing.Point(409, 171);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(78, 15);
             this.label13.TabIndex = 39;
@@ -162,7 +164,7 @@ namespace WinFormsAppGipTesting
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(357, 88);
+            this.label8.Location = new System.Drawing.Point(407, 88);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(156, 20);
             this.label8.TabIndex = 38;
@@ -172,6 +174,7 @@ namespace WinFormsAppGipTesting
             // 
             this.textBox3.Location = new System.Drawing.Point(23, 144);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(256, 23);
             this.textBox3.TabIndex = 37;
             // 
@@ -205,7 +208,7 @@ namespace WinFormsAppGipTesting
             this.textBox2.Location = new System.Drawing.Point(23, 290);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 139);
+            this.textBox2.Size = new System.Drawing.Size(255, 110);
             this.textBox2.TabIndex = 33;
             // 
             // textBox1
@@ -271,11 +274,33 @@ namespace WinFormsAppGipTesting
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(23, 406);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(255, 35);
+            this.button2.TabIndex = 50;
+            this.button2.Text = "Submit";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(408, 406);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(255, 35);
+            this.button4.TabIndex = 51;
+            this.button4.Text = "Submit";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // FormAdminPanelNewSolution
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label9);
@@ -303,6 +328,7 @@ namespace WinFormsAppGipTesting
             this.Controls.Add(this.label1);
             this.Name = "FormAdminPanelNewSolution";
             this.Text = "FormAdminPanelNewSolution";
+            this.Load += new System.EventHandler(this.FormAdminPanelNewSolution_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +361,7 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
     }
 }
