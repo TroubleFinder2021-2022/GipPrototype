@@ -66,6 +66,7 @@ namespace WinFormsAppGipTesting
             this.btnSoftware.TabIndex = 2;
             this.btnSoftware.Text = "Software";
             this.btnSoftware.UseVisualStyleBackColor = true;
+            this.btnSoftware.Click += new System.EventHandler(this.btnSoftware_Click);
             // 
             // pictbxHardware
             // 

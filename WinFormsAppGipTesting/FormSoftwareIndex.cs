@@ -9,26 +9,19 @@ using MySql.Data.MySqlClient;
 
 namespace WinFormsAppGipTesting
 {
-    public partial class FormHardwareIndex : Form
+    public partial class FormSoftwareIndex : Form
     {
         private string strCon = "server=84.198.150.18;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
         MySqlDataReader dr;
 
-        public FormHardwareIndex()
+        public FormSoftwareIndex()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FormSoftwareIndex_Load_1(object sender, EventArgs e)
         {
-            FormIndex Index = new FormIndex();
-            Index.Show();
-            this.Close();
-        }
-
-        private void FormHardwareIndex_Load(object sender, EventArgs e)
-        {
-            string strQueryCommand = "SELECT problem FROM troublefinder.solutions WHERE category = 'Hardware';";
+            string strQueryCommand = "SELECT problem FROM troublefinder.solutions WHERE category = 'Software';";
             MySqlConnection con = new MySqlConnection(strCon);
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
@@ -43,12 +36,19 @@ namespace WinFormsAppGipTesting
             listBox1.DataSource = dt;
             listBox1.DisplayMember = "problem";
             con.Close();
-        }
+        } 
 
         private void button2_Click(object sender, EventArgs e)
         {
             //string strProblem = listBox1.SelectedItem.ToString();
             textBox1.Text = "Coming soon";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormIndex Index = new FormIndex();
+            Index.Show();
+            this.Close();
         }
     }
 }

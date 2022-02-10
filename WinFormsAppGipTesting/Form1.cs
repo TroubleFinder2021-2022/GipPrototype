@@ -35,6 +35,13 @@ namespace WinFormsAppGipTesting
             AdminLogin.Show();
             this.Hide();
         }
+
+        private void btnSoftware_Click(object sender, EventArgs e)
+        {
+            FormSoftwareIndex SoftwareIndex = new FormSoftwareIndex();
+            SoftwareIndex.Show();
+            this.Hide();
+        }
     }
 }
 
