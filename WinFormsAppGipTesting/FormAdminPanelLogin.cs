@@ -11,15 +11,11 @@ namespace WinFormsAppGipTesting
 {
     public partial class FormAdminPanelLogin : Form
     {
-        MySqlConnection con;
-        MySqlCommand cmd;
-        MySqlDataReader dr;
+        private string strCon = "server=84.198.150.18;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
 
         public FormAdminPanelLogin()
         {
             InitializeComponent();
-            con = new MySqlConnection("server=84.198.150.18;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder");
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -31,17 +27,18 @@ namespace WinFormsAppGipTesting
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //AdminAccounts.Login();
             string strUsername = txtUsername.Text;
             string strPassword = txtPassword.Text;
-            cmd = new MySqlCommand();
+            string strQueryCommand = $"SELECT * FROM AdminAccounts WHERE AdminUsername='{strUsername}' AND AdminPassword='{strPassword}'";
+
+            MySqlConnection con = new MySqlConnection(strCon);
             con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = $"SELECT * FROM AdminAccounts WHERE AdminUsername='{strUsername}' AND AdminPassword='{strPassword}'";
-            dr = cmd.ExecuteReader();
-            if (dr.Read()) 
+            MySqlCommand cmd = new MySqlCommand(strQueryCommand, con);
+            MySqlDataReader dr = cmd.ExecuteReader();
+            
+            if (dr.Read())
             {
-                MessageBox.Show($"Login sucess, welcome {strUsername}.");
+                MessageBox.Show($"Login success, welcome {strUsername}.");
 
                 FormAdminPanelMain FormAdminMain = new FormAdminPanelMain();
                 FormAdminMain.Show();
