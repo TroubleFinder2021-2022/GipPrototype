@@ -88,13 +88,15 @@ namespace WinFormsAppGipTesting
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(438, 84);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textBox1.Size = new System.Drawing.Size(350, 199);
             this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "#";
             // 
             // button2
             // 

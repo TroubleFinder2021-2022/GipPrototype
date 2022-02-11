@@ -47,8 +47,21 @@ namespace WinFormsAppGipTesting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //string strProblem = listBox1.SelectedItem.ToString();
-            textBox1.Text = "Coming soon";
+            DataRowView drv = (DataRowView)listBox1.SelectedItem;
+            string strProblem = drv["problem"].ToString();
+
+            MySqlConnection con = new MySqlConnection(strCon);
+            MySqlCommand cmd = new MySqlCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = $"SELECT * FROM solutions WHERE problem = '{strProblem}';";
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                textBox1.Text = (dr["solution"]).ToString();
+            }
+            con.Close();
         }
     }
 }
