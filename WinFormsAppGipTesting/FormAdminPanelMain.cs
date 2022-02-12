@@ -29,6 +29,7 @@ namespace WinFormsAppGipTesting
         private void FormAdminPanelMain_Load(object sender, EventArgs e)
         {
             //DISPLAYS ADMIN ACCOUNTS
+            
             string strQueryCommand = "SELECT * FROM AdminAccounts";
             
             MySqlConnection con = new MySqlConnection(strCon);
@@ -42,6 +43,8 @@ namespace WinFormsAppGipTesting
             dataGridViewAdminAccounts.DataSource = dt;
             con.Close();
 
+
+            
             //DISPLAYS ALL SOLUTIONS
             string strQueryCommand2 = "SELECT * FROM solutions";
 
@@ -55,6 +58,7 @@ namespace WinFormsAppGipTesting
             da2.Fill(dt2);
             dataGridViewSolutions.DataSource = dt2;
             con2.Close();
+            
 
         }
 
@@ -70,6 +74,14 @@ namespace WinFormsAppGipTesting
             FormAdminPanelLogin FormAdminLogin = new FormAdminPanelLogin();
             FormAdminLogin.Show();
             this.Close();
+        }
+
+        private void dataGridViewAdminAccounts_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 2 && e.Value != null)
+            {
+                e.Value = new String('*', e.Value.ToString().Length);
+            }
         }
     }
 }

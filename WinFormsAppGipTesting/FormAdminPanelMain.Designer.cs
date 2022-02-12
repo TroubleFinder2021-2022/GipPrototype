@@ -82,28 +82,34 @@ namespace WinFormsAppGipTesting
             // 
             // dataGridViewAdminAccounts
             // 
+            this.dataGridViewAdminAccounts.AllowUserToAddRows = false;
             this.dataGridViewAdminAccounts.AllowUserToDeleteRows = false;
             this.dataGridViewAdminAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAdminAccounts.Location = new System.Drawing.Point(10, 84);
             this.dataGridViewAdminAccounts.Name = "dataGridViewAdminAccounts";
+            this.dataGridViewAdminAccounts.ReadOnly = true;
             this.dataGridViewAdminAccounts.RowTemplate.Height = 25;
-            this.dataGridViewAdminAccounts.Size = new System.Drawing.Size(340, 140);
+            this.dataGridViewAdminAccounts.Size = new System.Drawing.Size(493, 140);
             this.dataGridViewAdminAccounts.TabIndex = 4;
+            this.dataGridViewAdminAccounts.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewAdminAccounts_CellFormatting);
             // 
             // dataGridViewSolutions
             // 
+            this.dataGridViewSolutions.AllowUserToAddRows = false;
+            this.dataGridViewSolutions.AllowUserToDeleteRows = false;
             this.dataGridViewSolutions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSolutions.Location = new System.Drawing.Point(10, 250);
             this.dataGridViewSolutions.Name = "dataGridViewSolutions";
+            this.dataGridViewSolutions.ReadOnly = true;
             this.dataGridViewSolutions.RowTemplate.Height = 25;
-            this.dataGridViewSolutions.Size = new System.Drawing.Size(340, 140);
+            this.dataGridViewSolutions.Size = new System.Drawing.Size(493, 140);
             this.dataGridViewSolutions.TabIndex = 5;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(394, 250);
+            this.button2.Location = new System.Drawing.Point(509, 289);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 42);
+            this.button2.Size = new System.Drawing.Size(185, 62);
             this.button2.TabIndex = 7;
             this.button2.Text = "Create new and edit existing solutions";
             this.button2.UseVisualStyleBackColor = true;
