@@ -29,6 +29,7 @@ namespace WinFormsAppGipTesting
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHardwareIndex));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -120,8 +121,9 @@ namespace WinFormsAppGipTesting
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHardwareIndex";
-            this.Text = "FormHardwareIndex";
+            this.Text = "Hardware Solutions";
             this.Load += new System.EventHandler(this.FormHardwareIndex_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

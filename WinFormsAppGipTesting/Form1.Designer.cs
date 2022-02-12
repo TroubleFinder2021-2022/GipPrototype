@@ -29,6 +29,7 @@ namespace WinFormsAppGipTesting
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIndex));
             this.label1 = new System.Windows.Forms.Label();
             this.btnHardware = new System.Windows.Forms.Button();
             this.btnSoftware = new System.Windows.Forms.Button();
@@ -100,6 +101,7 @@ namespace WinFormsAppGipTesting
             // 
             // FormIndex
             // 
+            this.AccessibleName = "test";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -109,8 +111,9 @@ namespace WinFormsAppGipTesting
             this.Controls.Add(this.btnSoftware);
             this.Controls.Add(this.btnHardware);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormIndex";
-            this.Text = "Form1";
+            this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pictbxHardware)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictbxSoftware)).EndInit();
             this.ResumeLayout(false);

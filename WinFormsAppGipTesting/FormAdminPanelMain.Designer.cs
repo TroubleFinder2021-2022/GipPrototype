@@ -29,6 +29,7 @@ namespace WinFormsAppGipTesting
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdminPanelMain));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -138,8 +139,9 @@ namespace WinFormsAppGipTesting
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAdminPanelMain";
-            this.Text = "FormAdminPanelMain";
+            this.Text = "Admin Panel";
             this.Load += new System.EventHandler(this.FormAdminPanelMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdminAccounts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSolutions)).EndInit();
