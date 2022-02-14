@@ -42,6 +42,13 @@ namespace WinFormsAppGipTesting
             SoftwareIndex.Show();
             this.Hide();
         }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            FormSolutionManagement form = new FormSolutionManagement();
+            form.Show();
+            this.Hide();
+        }
     }
 }
 

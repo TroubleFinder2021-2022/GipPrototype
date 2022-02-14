@@ -98,6 +98,7 @@ namespace WinFormsAppGipTesting
             MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
             DataTable tbl = new DataTable();
             adp.Fill(tbl);
+            dgv.DataSource = tbl;
             con.Close();
             //36:00
         }

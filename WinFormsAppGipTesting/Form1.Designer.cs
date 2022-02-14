@@ -36,6 +36,7 @@ namespace WinFormsAppGipTesting
             this.pictbxHardware = new System.Windows.Forms.PictureBox();
             this.pictbxSoftware = new System.Windows.Forms.PictureBox();
             this.btnAdminPanel = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictbxHardware)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictbxSoftware)).BeginInit();
             this.SuspendLayout();
@@ -99,12 +100,23 @@ namespace WinFormsAppGipTesting
             this.btnAdminPanel.UseVisualStyleBackColor = true;
             this.btnAdminPanel.Click += new System.EventHandler(this.btnAdminPanel_Click);
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(13, 415);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 6;
+            this.btnTest.Text = "test button";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // FormIndex
             // 
             this.AccessibleName = "test";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnAdminPanel);
             this.Controls.Add(this.pictbxSoftware);
             this.Controls.Add(this.pictbxHardware);
@@ -129,6 +141,7 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.PictureBox pictbxHardware;
         private System.Windows.Forms.PictureBox pictbxSoftware;
         private System.Windows.Forms.Button btnAdminPanel;
+        private System.Windows.Forms.Button btnTest;
     }
 }
 
