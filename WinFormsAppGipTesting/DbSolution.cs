@@ -49,12 +49,13 @@ namespace WinFormsAppGipTesting
             con.Close();
         }
 
-        public static void UpdateSolution(Solution sol, string id)
+        public static void UpdateSolution(Solution sol, string strId)
         {
-            string strSql = "UPDATE solutions SET problem = @SolProblem, solution = @SolSolution, category = @SolCategory, subcategory = @SolSubCategory WHERE ID = @SolID";
+            string strSql = "UPDATE solutions SET problem = @SolProblem, solution = @SolSolution, category = @SolCategory, subcategory = @SolSubCategory WHERE solutions_id = @SolID";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(strSql, con);
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@SolID", MySqlDbType.VarChar).Value = strId;
             cmd.Parameters.Add("@SolProblem", MySqlDbType.VarChar).Value = sol.problem;
             cmd.Parameters.Add("@SolSolution", MySqlDbType.VarChar).Value = sol.solution;
             cmd.Parameters.Add("@SolCategory", MySqlDbType.VarChar).Value = sol.category;
@@ -71,13 +72,13 @@ namespace WinFormsAppGipTesting
             con.Close();
         }
 
-        public static void DeleteSolution(string id)
+        public static void DeleteSolution(string strId)
         {
-            string strSql = "DELETE FROM solutions WHERE ID = @SolID";
+            string strSql = "DELETE FROM solutions WHERE solutions_id = @SolID";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(strSql, con);
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("@SolID", MySqlDbType.VarChar).Value = id;
+            cmd.Parameters.Add("@SolID", MySqlDbType.VarChar).Value = strId;
             try
             {
                 cmd.ExecuteNonQuery();
@@ -100,7 +101,19 @@ namespace WinFormsAppGipTesting
             adp.Fill(tbl);
             dgv.DataSource = tbl;
             con.Close();
-            //36:00
+        }
+
+        public static void LoadCategories(string strQuery, string strColumn, ComboBox cmb)
+        {
+            string strSql = strQuery;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(strSql, con);
+            MySqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cmb.Items.Add(dr[strColumn]);
+            }
+            con.Close();
         }
     }
 }

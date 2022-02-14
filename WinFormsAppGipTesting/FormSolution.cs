@@ -11,11 +11,42 @@ namespace WinFormsAppGipTesting
     public partial class FormSolution : Form
     {
         private readonly FormSolutionManagement _parent;
+        public string strId, strProblem, strSolution, strCategory, strSubcategory;
 
         public FormSolution(FormSolutionManagement parent)
         {
             InitializeComponent();
             _parent = parent;
+
+            DbSolution.LoadCategories("SELECT * FROM category;", "name", cmbCategory);
+            DbSolution.LoadCategories("SELECT * FROM subcategory;", "name", cmbSubcategory);
+        }
+
+        private void FormSolution_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void UpdateInfo()
+        {
+            lblText.Text = "Update Solution";
+            btnSave.Text = "Update";
+            ActiveForm.Text = "Update Solution";
+            txtProblem.Text = strProblem;
+            txtSolution.Text = strSolution;
+            cmbCategory.SelectedItem = strCategory;
+            cmbSubcategory.SelectedItem = strSubcategory;
+        }
+
+        public void SaveInfo()
+        {
+            lblText.Text = "Add Solution";
+            btnSave.Text = "Save";
         }
 
         public void Clear()
@@ -53,6 +84,11 @@ namespace WinFormsAppGipTesting
                 Solution sol = new Solution(txtProblem.Text.Trim(), txtSolution.Text.Trim(), cmbCategory.SelectedItem.ToString(), cmbSubcategory.SelectedItem.ToString());
                 DbSolution.AddSolution(sol);
                 Clear();
+            }
+            if (btnSave.Text == "Update")
+            {
+                Solution sol = new Solution(txtProblem.Text.Trim(), txtSolution.Text.Trim(), cmbCategory.SelectedItem.ToString(), cmbSubcategory.SelectedItem.ToString());
+                DbSolution.UpdateSolution(sol, strId);
             }
             _parent.Display();
         }

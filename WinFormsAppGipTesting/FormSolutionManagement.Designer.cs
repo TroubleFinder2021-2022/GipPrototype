@@ -44,6 +44,8 @@ namespace WinFormsAppGipTesting
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.lblText = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -99,6 +101,7 @@ namespace WinFormsAppGipTesting
             this.dataGridView.ShowEditingIcon = false;
             this.dataGridView.Size = new System.Drawing.Size(715, 280);
             this.dataGridView.TabIndex = 0;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // Column1
             // 
@@ -164,9 +167,14 @@ namespace WinFormsAppGipTesting
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(471, 33);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::WinFormsAppGipTesting.Properties.Resources.magnifying_glass12;
+            this.pictureBox1.InitialImage = global::WinFormsAppGipTesting.Properties.Resources.magnifying_glass;
+            this.pictureBox1.Location = new System.Drawing.Point(468, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -177,6 +185,7 @@ namespace WinFormsAppGipTesting
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(245, 23);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnNew
             // 
@@ -194,12 +203,40 @@ namespace WinFormsAppGipTesting
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel2.Controls.Add(this.btnBack);
+            this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.lblText);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 50);
             this.panel2.TabIndex = 1;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(706, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(80, 25);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.BackColor = System.Drawing.Color.White;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Location = new System.Drawing.Point(792, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(80, 25);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = false;
             // 
             // lblText
             // 
@@ -247,5 +284,7 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.DataGridViewButtonColumn Column7;
         private System.Windows.Forms.Label lblText;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnBack;
     }
 }
