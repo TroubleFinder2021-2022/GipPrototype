@@ -11,7 +11,7 @@ namespace WinFormsAppGipTesting
 {
     public partial class FormHardwareIndex : Form
     {
-        private string strCon = "server=84.198.150.18;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
+        private string strCon = "server=mysql.sintcordula.be;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
         MySqlDataReader dr;
 
         public FormHardwareIndex()

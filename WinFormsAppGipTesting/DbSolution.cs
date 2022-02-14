@@ -13,7 +13,7 @@ namespace WinFormsAppGipTesting
     {
         public static MySqlConnection GetConnection()
         {
-            string strSql = "server=84.198.150.18;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
+            string strSql = "server=mysql.sintcordula.be; user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
             MySqlConnection con = new MySqlConnection(strSql);
 
             try
