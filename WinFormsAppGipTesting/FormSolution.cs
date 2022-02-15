@@ -29,7 +29,7 @@ namespace WinFormsAppGipTesting
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            this.DialogResult = DialogResult.OK;
         }
 
         public void UpdateInfo()

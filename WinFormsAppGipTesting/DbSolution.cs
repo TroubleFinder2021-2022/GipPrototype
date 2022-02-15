@@ -115,5 +115,39 @@ namespace WinFormsAppGipTesting
             }
             con.Close();
         }
+
+        public static void LoadSolutions(string strQuery, TextBox txtbox)
+        {
+            string strSql = strQuery;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(strSql, con);
+            MySqlDataReader dr;
+            cmd.Connection = con;
+            cmd.CommandText = strQuery;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                txtbox.Text = (dr["solution"]).ToString();
+            }
+            con.Close();
+        }
+
+        public static void LoadProblems(string strQuery, ListBox listbox)
+        {
+            string strSql = strQuery;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(strSql, con);
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+            cmd.Connection = con;
+            cmd.CommandText = strQuery;
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+
+            listbox.DataSource = dt;
+            listbox.DisplayMember = "problem";
+            con.Close();
+        }
     }
 }

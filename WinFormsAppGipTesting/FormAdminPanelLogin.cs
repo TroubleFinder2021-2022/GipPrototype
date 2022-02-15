@@ -18,13 +18,6 @@ namespace WinFormsAppGipTesting
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            FormIndex Index = new FormIndex();
-            Index.Show();
-            this.Close();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string strUsername = txtUsername.Text;
@@ -38,7 +31,7 @@ namespace WinFormsAppGipTesting
             
             if (dr.Read())
             {
-                MessageBox.Show($"Login success, welcome {strUsername}.");
+                MessageBox.Show($"Login success, welcome {strUsername}.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 FormAdminPanelMain FormAdminMain = new FormAdminPanelMain();
                 FormAdminMain.Show();
@@ -46,9 +39,16 @@ namespace WinFormsAppGipTesting
             }
             else
             {
-                MessageBox.Show($"Invalid Login please check username and password");
+                MessageBox.Show($"Invalid Login please check username and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             con.Close();
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            FormIndex Index = new FormIndex();
+            Index.Show();
+            this.Close();
         }
     }
 }

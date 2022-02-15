@@ -67,5 +67,26 @@ namespace WinFormsAppGipTesting
                 return;
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FormAdminPanelMain formAdminPanelMain = new FormAdminPanelMain();
+            formAdminPanelMain.Show();
+            this.Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show($"Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FormAdminPanelLogin FormAdminLogin = new FormAdminPanelLogin();
+                FormAdminLogin.Show();
+                this.Close();
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 }

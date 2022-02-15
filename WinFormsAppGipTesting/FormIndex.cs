@@ -12,43 +12,51 @@ namespace WinFormsAppGipTesting
 {
     public partial class FormIndex : Form
     {
+        FormProblem formHardwareIndex;
         public FormIndex()
         {
             InitializeComponent();
-            
-        }
-        private void FormIndex_Load(object sender, EventArgs e)
-        {
-            
+            formHardwareIndex = new FormProblem(this);
+
+
         }
 
         private void btnHardware_Click(object sender, EventArgs e)
         {
+            formHardwareIndex.Clear();
+            formHardwareIndex.HardwareInfo();
+            formHardwareIndex.ShowDialog();
+            /*
             FormHardwareIndex HardwareIndex = new FormHardwareIndex();
             HardwareIndex.Show();
             this.Hide();
+            */
         }
 
-        private void btnAdminPanel_Click(object sender, EventArgs e)
+        private void btnSoftware_Click(object sender, EventArgs e)
+        {
+            formHardwareIndex.Clear();
+            formHardwareIndex.SoftwareInfo();
+            formHardwareIndex.ShowDialog();
+            /*
+            FormSoftwareIndex SoftwareIndex = new FormSoftwareIndex();
+            SoftwareIndex.Show();
+            this.Hide();
+            */
+        }
+
+        private void btnAdminPanel_Click_1(object sender, EventArgs e)
         {
             FormAdminPanelLogin AdminLogin = new FormAdminPanelLogin();
             AdminLogin.Show();
             this.Hide();
         }
 
-        private void btnSoftware_Click(object sender, EventArgs e)
+        private void btnSecret_Click(object sender, EventArgs e)
         {
-            FormSoftwareIndex SoftwareIndex = new FormSoftwareIndex();
-            SoftwareIndex.Show();
-            this.Hide();
+
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-            FormSolutionManagement form = new FormSolutionManagement();
-            form.Show();
-            this.Hide();
-        }
     }
 }
 
