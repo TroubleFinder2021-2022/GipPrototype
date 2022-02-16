@@ -11,37 +11,16 @@ namespace WinFormsAppGipTesting
 {
     public partial class FormAdminPanelLogin : Form
     {
-        private string strCon = "server=mysql.sintcordula.be;user id=troublefinder_usr;password=7a3Gf3VY;persistsecurityinfo=True;database=troublefinder";
-
         public FormAdminPanelLogin()
         {
             InitializeComponent();
-        }
+    }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string strUsername = txtUsername.Text;
             string strPassword = txtPassword.Text;
-            string strQueryCommand = $"SELECT * FROM AdminAccounts WHERE AdminUsername='{strUsername}' AND AdminPassword='{strPassword}'";
-
-            MySqlConnection con = new MySqlConnection(strCon);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand(strQueryCommand, con);
-            MySqlDataReader dr = cmd.ExecuteReader();
-            
-            if (dr.Read())
-            {
-                MessageBox.Show($"Login success, welcome {strUsername}.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                FormAdminPanelMain FormAdminMain = new FormAdminPanelMain();
-                FormAdminMain.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show($"Invalid Login please check username and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            con.Close();
+            DbSolution.AdminLogin($"SELECT * FROM AdminAccounts WHERE AdminUsername='{strUsername}' AND AdminPassword='{strPassword}'", strUsername, strPassword, this);
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)

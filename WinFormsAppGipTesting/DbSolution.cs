@@ -149,5 +149,31 @@ namespace WinFormsAppGipTesting
             listbox.DisplayMember = "problem";
             con.Close();
         }
+
+        public static void AdminLogin(string strQuery, string strUsername, string strPassword, FormAdminPanelLogin form)
+        {
+            string strSql = strQuery;
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(strSql, con);
+            MySqlDataReader dr;
+            cmd.Connection = con;
+            cmd.CommandText = strQuery;
+            dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                MessageBox.Show($"Login success, welcome {strUsername}.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                FormAdminPanelMain FormAdminMain = new FormAdminPanelMain();
+                FormAdminMain.Show();
+                form.Close();
+            }
+            else
+            {
+                MessageBox.Show($"Invalid Login please check username and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            con.Close();
+        }
     }
 }
