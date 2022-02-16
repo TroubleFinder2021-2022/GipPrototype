@@ -29,5 +29,22 @@ namespace WinFormsAppGipTesting
             Index.Show();
             this.Close();
         }
+
+        private void lblShowPassword_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (txtPassword.Text != string.Empty)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
+        }
+
+        private void lblShowPassword_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPassword.PasswordChar = '*';
+        }
     }
 }

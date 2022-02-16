@@ -40,6 +40,7 @@ namespace WinFormsAppGipTesting
             this.btnBack = new System.Windows.Forms.Button();
             this.lblText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblShowPassword = new System.Windows.Forms.LinkLabel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -144,6 +145,7 @@ namespace WinFormsAppGipTesting
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblShowPassword);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtUsername);
@@ -153,6 +155,22 @@ namespace WinFormsAppGipTesting
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 400);
             this.panel1.TabIndex = 31;
+            // 
+            // lblShowPassword
+            // 
+            this.lblShowPassword.ActiveLinkColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblShowPassword.AutoSize = true;
+            this.lblShowPassword.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lblShowPassword.LinkColor = System.Drawing.Color.SlateGray;
+            this.lblShowPassword.Location = new System.Drawing.Point(398, 217);
+            this.lblShowPassword.Name = "lblShowPassword";
+            this.lblShowPassword.Size = new System.Drawing.Size(89, 15);
+            this.lblShowPassword.TabIndex = 6;
+            this.lblShowPassword.TabStop = true;
+            this.lblShowPassword.Text = "Show Password";
+            this.lblShowPassword.VisitedLinkColor = System.Drawing.Color.SlateGray;
+            this.lblShowPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblShowPassword_MouseDown);
+            this.lblShowPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblShowPassword_MouseUp);
             // 
             // FormAdminPanelLogin
             // 
@@ -184,5 +202,6 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.LinkLabel lblShowPassword;
     }
 }
