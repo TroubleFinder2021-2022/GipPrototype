@@ -60,7 +60,7 @@ namespace WinFormsAppGipTesting
             this.btnSolutionManager.TabIndex = 7;
             this.btnSolutionManager.Text = "Manage Solutions";
             this.btnSolutionManager.UseVisualStyleBackColor = false;
-            this.btnSolutionManager.Click += new System.EventHandler(this.button2_Click);
+            this.btnSolutionManager.Click += new System.EventHandler(this.btnSolutionManager_Click);
             // 
             // panel2
             // 
@@ -144,14 +144,18 @@ namespace WinFormsAppGipTesting
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Column1.DataPropertyName = "idAdminAccount";
+            this.Column1.FillWeight = 126.9036F;
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 43;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "AdminUsername";
+            this.Column2.FillWeight = 93.27411F;
             this.Column2.HeaderText = "Username";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -159,6 +163,7 @@ namespace WinFormsAppGipTesting
             // Column3
             // 
             this.Column3.DataPropertyName = "AdminPassword";
+            this.Column3.FillWeight = 93.27411F;
             this.Column3.HeaderText = "Password";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -166,22 +171,26 @@ namespace WinFormsAppGipTesting
             // Column4
             // 
             this.Column4.DataPropertyName = "AdminEmail";
+            this.Column4.FillWeight = 93.27411F;
             this.Column4.HeaderText = "Email";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
             this.Column5.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column5.FillWeight = 93.27411F;
             this.Column5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column5.HeaderText = "";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Text = "Change Password";
             this.Column5.UseColumnTextForButtonValue = true;
+            this.Column5.Width = 120;
             // 
             // FormAdminPanelMain
             // 

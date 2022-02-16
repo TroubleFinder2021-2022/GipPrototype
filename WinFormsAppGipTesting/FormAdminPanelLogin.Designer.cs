@@ -40,17 +40,20 @@ namespace WinFormsAppGipTesting
             this.btnBack = new System.Windows.Forms.Button();
             this.lblText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblShowPassword = new System.Windows.Forms.LinkLabel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLogin.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(287, 265);
+            this.btnLogin.Location = new System.Drawing.Point(287, 323);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(200, 35);
             this.btnLogin.TabIndex = 1;
@@ -60,8 +63,9 @@ namespace WinFormsAppGipTesting
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(287, 94);
+            this.label2.Location = new System.Drawing.Point(287, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 2;
@@ -69,8 +73,9 @@ namespace WinFormsAppGipTesting
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(287, 173);
+            this.label3.Location = new System.Drawing.Point(287, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 15);
             this.label3.TabIndex = 3;
@@ -78,14 +83,16 @@ namespace WinFormsAppGipTesting
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(287, 112);
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtUsername.Location = new System.Drawing.Point(287, 172);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(200, 23);
             this.txtUsername.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(287, 191);
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPassword.Location = new System.Drawing.Point(287, 251);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(200, 23);
@@ -145,6 +152,7 @@ namespace WinFormsAppGipTesting
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblShowPassword);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label2);
@@ -156,13 +164,25 @@ namespace WinFormsAppGipTesting
             this.panel1.Size = new System.Drawing.Size(775, 400);
             this.panel1.TabIndex = 31;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = global::WinFormsAppGipTesting.Properties.Resources.adminIcon1;
+            this.pictureBox1.Location = new System.Drawing.Point(325, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblShowPassword
             // 
             this.lblShowPassword.ActiveLinkColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblShowPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblShowPassword.AutoSize = true;
             this.lblShowPassword.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblShowPassword.LinkColor = System.Drawing.Color.SlateGray;
-            this.lblShowPassword.Location = new System.Drawing.Point(398, 217);
+            this.lblShowPassword.Location = new System.Drawing.Point(398, 277);
             this.lblShowPassword.Name = "lblShowPassword";
             this.lblShowPassword.Size = new System.Drawing.Size(89, 15);
             this.lblShowPassword.TabIndex = 6;
@@ -187,6 +207,7 @@ namespace WinFormsAppGipTesting
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,5 +224,6 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel lblShowPassword;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

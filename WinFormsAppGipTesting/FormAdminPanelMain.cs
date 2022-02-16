@@ -17,13 +17,6 @@ namespace WinFormsAppGipTesting
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormAdminPanelLogin FormAdminLogin = new FormAdminPanelLogin();
-            FormAdminLogin.Show();
-            this.Close();
-        }
-
         private void FormAdminPanelMain_Load(object sender, EventArgs e)
         {
             DbSolution.DisplayAndSearchSolution("SELECT * FROM AdminAccounts", dataGridView);
@@ -41,8 +34,8 @@ namespace WinFormsAppGipTesting
         {
             if (MessageBox.Show($"Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                FormAdminPanelLogin FormAdminLogin = new FormAdminPanelLogin();
-                FormAdminLogin.Show();
+                FormIndex formIndex = new FormIndex();
+                formIndex.Show();
                 this.Close();
             }
             else
@@ -51,7 +44,7 @@ namespace WinFormsAppGipTesting
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSolutionManager_Click(object sender, EventArgs e)
         {
             FormSolutionManagement formSolutionManagement = new FormSolutionManagement();
             formSolutionManagement.Show();

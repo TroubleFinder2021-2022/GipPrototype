@@ -52,10 +52,23 @@ namespace WinFormsAppGipTesting
             this.Hide();
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to exit TroubleFinder™ ?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
+        }
+
         private void btnSecret_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("No secrets are currently available.", ";)", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
+
 
     }
 }

@@ -59,7 +59,7 @@ namespace WinFormsAppGipTesting
             if (e.ColumnIndex == 1)
             {
                 //Delete
-                if (MessageBox.Show("Are you sure you want to remove this problem?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to remove this problem?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) == DialogResult.Yes)
                 {
                     DbSolution.DeleteSolution(dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display();
@@ -79,8 +79,8 @@ namespace WinFormsAppGipTesting
         {
             if (MessageBox.Show($"Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                FormAdminPanelLogin FormAdminLogin = new FormAdminPanelLogin();
-                FormAdminLogin.Show();
+                FormIndex formIndex = new FormIndex();
+                formIndex.Show();
                 this.Close();
             }
             else

@@ -44,6 +44,7 @@ namespace WinFormsAppGipTesting
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictbxHardware)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictbxSoftware)).BeginInit();
             this.panel2.SuspendLayout();
@@ -116,9 +117,9 @@ namespace WinFormsAppGipTesting
             this.btnSecret.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSecret.Location = new System.Drawing.Point(12, 527);
             this.btnSecret.Name = "btnSecret";
-            this.btnSecret.Size = new System.Drawing.Size(49, 22);
+            this.btnSecret.Size = new System.Drawing.Size(95, 22);
             this.btnSecret.TabIndex = 6;
-            this.btnSecret.Text = "secret";
+            this.btnSecret.Text = "Secret Button";
             this.btnSecret.UseVisualStyleBackColor = false;
             this.btnSecret.Click += new System.EventHandler(this.btnSecret_Click);
             // 
@@ -223,12 +224,28 @@ namespace WinFormsAppGipTesting
             this.label1.TabIndex = 33;
             this.label1.Text = "TroubleFinder";
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.Location = new System.Drawing.Point(777, 527);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(95, 22);
+            this.btnClose.TabIndex = 34;
+            this.btnClose.Text = "Exit Application";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FormIndex
             // 
             this.AccessibleName = "test";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnSecret);
@@ -264,6 +281,7 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 
