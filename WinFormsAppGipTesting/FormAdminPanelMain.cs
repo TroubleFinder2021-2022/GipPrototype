@@ -12,9 +12,12 @@ namespace WinFormsAppGipTesting
 {
     public partial class FormAdminPanelMain : Form
     {
+        FormChangePassword form;
+
         public FormAdminPanelMain()
         {   
             InitializeComponent();
+            form = new FormChangePassword(this);
         }
 
         private void FormAdminPanelMain_Load(object sender, EventArgs e)
@@ -50,5 +53,18 @@ namespace WinFormsAppGipTesting
             formSolutionManagement.Show();
             this.Close();
         }
+
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                form.Clear();
+                form.strUsername = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+                form.UpdateInfo();
+                form.ShowDialog();
+            }
+        }
+
+       
     }
 }

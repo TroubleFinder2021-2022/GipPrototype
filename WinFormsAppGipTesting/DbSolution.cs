@@ -175,5 +175,36 @@ namespace WinFormsAppGipTesting
             }
             con.Close();
         }
+
+        public static void AdminChangePassword(string strUsername, string strOldPassword, string strNewPassword, FormChangePassword form)
+        {
+            string strSql1 = $"SELECT * FROM AdminAccounts WHERE AdminPassword = '{strOldPassword}' AND AdminUsername = '{strUsername}';";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(strSql1, con);
+            MySqlDataReader dr;
+            cmd.Connection = con;
+            cmd.CommandText = strSql1;
+            dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                string strSql2 = $"UPDATE AdminAccounts SET AdminPassword = '{strNewPassword}' WHERE AdminUsername = '{strUsername}';";
+                MySqlConnection con2 = GetConnection();
+                MySqlCommand cmd2 = new MySqlCommand(strSql2, con2);
+                cmd2.Connection = con2;
+                cmd2.CommandText = strSql2;
+                cmd2.ExecuteReader();
+
+                MessageBox.Show($"Password for {strUsername} has successfully been updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con2.Close();
+            }
+            else
+            {
+                MessageBox.Show($"Old password is incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            form.Clear();
+            con.Close();
+        }
     }
 }

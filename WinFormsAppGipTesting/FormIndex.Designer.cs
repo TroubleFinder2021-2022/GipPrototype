@@ -57,7 +57,7 @@ namespace WinFormsAppGipTesting
             this.btnHardware.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnHardware.FlatAppearance.BorderSize = 0;
             this.btnHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHardware.Location = new System.Drawing.Point(173, 290);
+            this.btnHardware.Location = new System.Drawing.Point(173, 280);
             this.btnHardware.Name = "btnHardware";
             this.btnHardware.Size = new System.Drawing.Size(200, 50);
             this.btnHardware.TabIndex = 1;
@@ -71,7 +71,7 @@ namespace WinFormsAppGipTesting
             this.btnSoftware.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnSoftware.FlatAppearance.BorderSize = 0;
             this.btnSoftware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSoftware.Location = new System.Drawing.Point(394, 290);
+            this.btnSoftware.Location = new System.Drawing.Point(394, 280);
             this.btnSoftware.Name = "btnSoftware";
             this.btnSoftware.Size = new System.Drawing.Size(200, 50);
             this.btnSoftware.TabIndex = 2;
@@ -82,8 +82,8 @@ namespace WinFormsAppGipTesting
             // pictbxHardware
             // 
             this.pictbxHardware.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictbxHardware.Image = global::WinFormsAppGipTesting.Properties.Resources.iconsHard;
-            this.pictbxHardware.Location = new System.Drawing.Point(173, 54);
+            this.pictbxHardware.Image = global::WinFormsAppGipTesting.Properties.Resources.iconsHard1;
+            this.pictbxHardware.Location = new System.Drawing.Point(173, 61);
             this.pictbxHardware.Name = "pictbxHardware";
             this.pictbxHardware.Size = new System.Drawing.Size(200, 200);
             this.pictbxHardware.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -94,7 +94,7 @@ namespace WinFormsAppGipTesting
             // 
             this.pictbxSoftware.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictbxSoftware.Image = global::WinFormsAppGipTesting.Properties.Resources.iconsSoft;
-            this.pictbxSoftware.Location = new System.Drawing.Point(394, 54);
+            this.pictbxSoftware.Location = new System.Drawing.Point(394, 61);
             this.pictbxSoftware.Name = "pictbxSoftware";
             this.pictbxSoftware.Size = new System.Drawing.Size(200, 200);
             this.pictbxSoftware.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -216,13 +216,13 @@ namespace WinFormsAppGipTesting
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.SlateGray;
-            this.label1.Location = new System.Drawing.Point(337, 56);
+            this.label1.Location = new System.Drawing.Point(327, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 38);
+            this.label1.Size = new System.Drawing.Size(212, 36);
             this.label1.TabIndex = 33;
-            this.label1.Text = "TroubleFinder";
+            this.label1.Text = "TroubleFinder™";
             // 
             // btnClose
             // 

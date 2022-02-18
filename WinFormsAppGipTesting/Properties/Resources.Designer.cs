@@ -123,6 +123,16 @@ namespace WinFormsAppGipTesting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconsHard1 {
+            get {
+                object obj = ResourceManager.GetObject("iconsHard1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconsSoft {
             get {
                 object obj = ResourceManager.GetObject("iconsSoft", resourceCulture);
