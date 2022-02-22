@@ -178,25 +178,39 @@ namespace WinFormsAppGipTesting
 
         public static void AdminChangePassword(string strUsername, string strOldPassword, string strNewPassword, FormChangePassword form)
         {
-            string strSql1 = $"SELECT * FROM AdminAccounts WHERE AdminPassword = '{strOldPassword}' AND AdminUsername = '{strUsername}';";
+            string strSql = $"SELECT * FROM AdminAccounts WHERE AdminPassword = '{strOldPassword}' AND AdminUsername = '{strUsername}';";
             MySqlConnection con = GetConnection();
-            MySqlCommand cmd = new MySqlCommand(strSql1, con);
+            MySqlCommand cmd = new MySqlCommand(strSql, con);
             MySqlDataReader dr;
             cmd.Connection = con;
-            cmd.CommandText = strSql1;
+            cmd.CommandText = strSql;
             dr = cmd.ExecuteReader();
 
             if (dr.Read())
             {
+                /*
                 string strSql2 = $"UPDATE AdminAccounts SET AdminPassword = '{strNewPassword}' WHERE AdminUsername = '{strUsername}';";
                 MySqlConnection con2 = GetConnection();
                 MySqlCommand cmd2 = new MySqlCommand(strSql2, con2);
                 cmd2.Connection = con2;
                 cmd2.CommandText = strSql2;
                 cmd2.ExecuteReader();
+                
+                cmd.CommandText = $"UPDATE AdminAccounts SET AdminPassword = '{strNewPassword}' WHERE AdminUsername = '{strUsername}';";
+                cmd.ExecuteReader();
 
-                MessageBox.Show($"Password for {strUsername} has successfully been updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                con2.Close();
+                if (dr.Read())
+                {
+                    MessageBox.Show($"Password for {strUsername} has successfully been updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("MySQL Connection failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //con2.Close();
+
+                */
             }
             else
             {
