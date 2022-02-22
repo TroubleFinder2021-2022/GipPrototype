@@ -26,11 +26,6 @@ namespace WinFormsAppGipTesting
             formHardwareIndex.Clear();
             formHardwareIndex.HardwareInfo();
             formHardwareIndex.ShowDialog();
-            /*
-            FormHardwareIndex HardwareIndex = new FormHardwareIndex();
-            HardwareIndex.Show();
-            this.Hide();
-            */
         }
 
         private void btnSoftware_Click(object sender, EventArgs e)
@@ -38,11 +33,6 @@ namespace WinFormsAppGipTesting
             formHardwareIndex.Clear();
             formHardwareIndex.SoftwareInfo();
             formHardwareIndex.ShowDialog();
-            /*
-            FormSoftwareIndex SoftwareIndex = new FormSoftwareIndex();
-            SoftwareIndex.Show();
-            this.Hide();
-            */
         }
 
         private void btnAdminPanel_Click_1(object sender, EventArgs e)
