@@ -40,8 +40,10 @@ namespace WinFormsAppGipTesting
             this.btnAdminPanel = new System.Windows.Forms.Button();
             this.lblCategoryHeader = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -75,7 +77,7 @@ namespace WinFormsAppGipTesting
             this.lstProblems.ItemHeight = 15;
             this.lstProblems.Location = new System.Drawing.Point(35, 59);
             this.lstProblems.Name = "lstProblems";
-            this.lstProblems.Size = new System.Drawing.Size(300, 229);
+            this.lstProblems.Size = new System.Drawing.Size(300, 64);
             this.lstProblems.TabIndex = 4;
             // 
             // label3
@@ -152,6 +154,7 @@ namespace WinFormsAppGipTesting
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dataGridView);
             this.panel1.Controls.Add(this.lstProblems);
             this.panel1.Controls.Add(this.btnGetSolution);
             this.panel1.Controls.Add(this.lblCategoryTitle);
@@ -161,6 +164,20 @@ namespace WinFormsAppGipTesting
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(725, 350);
             this.panel1.TabIndex = 33;
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AllowUserToResizeColumns = false;
+            this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(35, 137);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowTemplate.Height = 25;
+            this.dataGridView.Size = new System.Drawing.Size(300, 150);
+            this.dataGridView.TabIndex = 8;
             // 
             // FormProblem
             // 
@@ -174,10 +191,12 @@ namespace WinFormsAppGipTesting
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TroubleFinder™";
             this.Load += new System.EventHandler(this.FormHardwareIndex_Load);
+            this.Shown += new System.EventHandler(this.FormProblem_Shown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,5 +212,6 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Button btnAdminPanel;
         private System.Windows.Forms.Label lblCategoryHeader;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

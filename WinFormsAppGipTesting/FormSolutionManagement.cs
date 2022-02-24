@@ -21,7 +21,7 @@ namespace WinFormsAppGipTesting
 
         public void Display()
         {
-            DbSolution.DisplayAndSearchSolution("SELECT * FROM solutions", dataGridView);
+            DbSolution.DisplayAndSearchSolution($"SELECT * FROM solutions", dataGridView);
         }
 
         private void btnNew_Click(object sender, EventArgs e)

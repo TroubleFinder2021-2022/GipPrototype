@@ -59,5 +59,15 @@ namespace WinFormsAppGipTesting
             txtSolution.Text = string.Empty;
             strCategory = "";
         }
+
+        public void Display()
+        {
+            DbSolution.DisplayAndSearchSolution($"SELECT * FROM solutions WHERE category = '{strCategory}';", dataGridView);
+        }
+
+        private void FormProblem_Shown(object sender, EventArgs e)
+        {
+            Display();
+        }
     }
 }
