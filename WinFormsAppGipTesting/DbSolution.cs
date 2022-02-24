@@ -188,29 +188,15 @@ namespace WinFormsAppGipTesting
 
             if (dr.Read())
             {
-                /*
                 string strSql2 = $"UPDATE AdminAccounts SET AdminPassword = '{strNewPassword}' WHERE AdminUsername = '{strUsername}';";
                 MySqlConnection con2 = GetConnection();
                 MySqlCommand cmd2 = new MySqlCommand(strSql2, con2);
                 cmd2.Connection = con2;
                 cmd2.CommandText = strSql2;
                 cmd2.ExecuteReader();
-                
-                cmd.CommandText = $"UPDATE AdminAccounts SET AdminPassword = '{strNewPassword}' WHERE AdminUsername = '{strUsername}';";
-                cmd.ExecuteReader();
 
-                if (dr.Read())
-                {
-                    MessageBox.Show($"Password for {strUsername} has successfully been updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("MySQL Connection failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                //con2.Close();
-
-                */
+                MessageBox.Show($"Password for {strUsername} has successfully been updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con2.Close();
             }
             else
             {
