@@ -25,19 +25,6 @@ namespace WinFormsAppGipTesting
             this.DialogResult = DialogResult.OK;
         }
 
-        private void FormHardwareIndex_Load(object sender, EventArgs e)
-        {
-            DbSolution.LoadProblems($"SELECT problem FROM troublefinder.solutions WHERE category = '{strCategory}';", lstProblems);
-        }
-
-        private void btnGetSolution_Click(object sender, EventArgs e)
-        {
-            DataRowView drv = (DataRowView)lstProblems.SelectedItem;
-            string strProblem = drv["problem"].ToString();
-
-            DbSolution.LoadSolutions($"SELECT * FROM solutions WHERE problem = '{strProblem}';", txtSolution);
-        }
-
         public void HardwareInfo()
         {
             lblCategoryHeader.Text = "Hardware";
@@ -57,17 +44,50 @@ namespace WinFormsAppGipTesting
             lblCategoryHeader.Text = string.Empty;
             lblCategoryHeader.Text = string.Empty;
             txtSolution.Text = string.Empty;
+            txtCategory.Text = string.Empty;
+            txtSearch.Text = string.Empty;
+            cmbSubCategory.Text = string.Empty;
+            cmbSubCategory.Items.Clear();
             strCategory = "";
         }
 
         public void Display()
         {
-            DbSolution.DisplayAndSearchSolution($"SELECT * FROM solutions WHERE category = '{strCategory}';", dataGridView);
+            //UPDATE subcategory SET category_id = 1 WHERE subcategory_id = 9;
+            txtCategory.Text = strCategory;
+            DbSolution.DisplayAndSearchSolution($"SELECT problem FROM solutions WHERE category = '{strCategory}';", dataGridView);
+            if (txtCategory.Text == "Hardware")
+            {
+                DbSolution.LoadCategories($"SELECT * FROM subcategory WHERE category_id = {0};", "name", cmbSubCategory);
+            }
+            else if (txtCategory.Text == "Software")
+            {
+                DbSolution.LoadCategories($"SELECT * FROM subcategory WHERE category_id = {1};", "name", cmbSubCategory);
+            }
+
         }
 
         private void FormProblem_Shown(object sender, EventArgs e)
         {
             Display();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            DbSolution.DisplayAndSearchSolution($"SELECT problem FROM solutions WHERE category = '{strCategory}' AND problem LIKE '%" + txtSearch.Text + "%'", dataGridView);
+            cmbSubCategory.Text = string.Empty;
+        }
+
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string strProblem = dataGridView.CurrentCell.Value.ToString();
+            DbSolution.LoadSolutions($"SELECT * FROM solutions WHERE problem = '{strProblem}';", txtSolution);
+        }
+
+        private void cmbSubCategory_SelectedValueChanged(object sender, EventArgs e)
+        {
+            DbSolution.DisplayAndSearchSolution($"SELECT problem FROM solutions WHERE category = '{strCategory}' AND subcategory = '{cmbSubCategory.SelectedItem}' AND problem LIKE '%" + txtSearch.Text + "%'", dataGridView);
+            txtSearch.Text = string.Empty;
         }
     }
 }

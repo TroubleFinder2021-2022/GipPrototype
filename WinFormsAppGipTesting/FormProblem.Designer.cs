@@ -32,17 +32,23 @@ namespace WinFormsAppGipTesting
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProblem));
             this.btnBack = new System.Windows.Forms.Button();
             this.lblCategoryTitle = new System.Windows.Forms.Label();
-            this.lstProblems = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSolution = new System.Windows.Forms.TextBox();
-            this.btnGetSolution = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAdminPanel = new System.Windows.Forms.Button();
             this.lblCategoryHeader = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbSubCategory = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Problems = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,15 +77,6 @@ namespace WinFormsAppGipTesting
             this.lblCategoryTitle.TabIndex = 3;
             this.lblCategoryTitle.Text = "{category} Problems:";
             // 
-            // lstProblems
-            // 
-            this.lstProblems.FormattingEnabled = true;
-            this.lstProblems.ItemHeight = 15;
-            this.lstProblems.Location = new System.Drawing.Point(35, 59);
-            this.lstProblems.Name = "lstProblems";
-            this.lstProblems.Size = new System.Drawing.Size(300, 64);
-            this.lstProblems.TabIndex = 4;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -96,26 +93,15 @@ namespace WinFormsAppGipTesting
             this.txtSolution.BackColor = System.Drawing.Color.White;
             this.txtSolution.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtSolution.Enabled = false;
+            this.txtSolution.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSolution.Location = new System.Drawing.Point(397, 58);
             this.txtSolution.Multiline = true;
             this.txtSolution.Name = "txtSolution";
             this.txtSolution.ReadOnly = true;
             this.txtSolution.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtSolution.Size = new System.Drawing.Size(300, 230);
+            this.txtSolution.Size = new System.Drawing.Size(300, 250);
             this.txtSolution.TabIndex = 6;
-            // 
-            // btnGetSolution
-            // 
-            this.btnGetSolution.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnGetSolution.FlatAppearance.BorderSize = 0;
-            this.btnGetSolution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetSolution.Location = new System.Drawing.Point(218, 294);
-            this.btnGetSolution.Name = "btnGetSolution";
-            this.btnGetSolution.Size = new System.Drawing.Size(300, 35);
-            this.btnGetSolution.TabIndex = 7;
-            this.btnGetSolution.Text = "View solution for selected problem";
-            this.btnGetSolution.UseVisualStyleBackColor = false;
-            this.btnGetSolution.Click += new System.EventHandler(this.btnGetSolution_Click);
+            this.txtSolution.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
@@ -154,9 +140,13 @@ namespace WinFormsAppGipTesting
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtCategory);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.cmbSubCategory);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.dataGridView);
-            this.panel1.Controls.Add(this.lstProblems);
-            this.panel1.Controls.Add(this.btnGetSolution);
             this.panel1.Controls.Add(this.lblCategoryTitle);
             this.panel1.Controls.Add(this.txtSolution);
             this.panel1.Controls.Add(this.label3);
@@ -164,6 +154,65 @@ namespace WinFormsAppGipTesting
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(725, 350);
             this.panel1.TabIndex = 33;
+            // 
+            // txtCategory
+            // 
+            this.txtCategory.Enabled = false;
+            this.txtCategory.Location = new System.Drawing.Point(35, 112);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.PlaceholderText = "{category}";
+            this.txtCategory.ReadOnly = true;
+            this.txtCategory.Size = new System.Drawing.Size(121, 23);
+            this.txtCategory.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(214, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 15);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Subcategory";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 15);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Category";
+            // 
+            // cmbSubCategory
+            // 
+            this.cmbSubCategory.FormattingEnabled = true;
+            this.cmbSubCategory.Location = new System.Drawing.Point(214, 112);
+            this.cmbSubCategory.Name = "cmbSubCategory";
+            this.cmbSubCategory.Size = new System.Drawing.Size(121, 23);
+            this.cmbSubCategory.TabIndex = 12;
+            this.cmbSubCategory.SelectedValueChanged += new System.EventHandler(this.cmbSubCategory_SelectedValueChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::WinFormsAppGipTesting.Properties.Resources.magnifying_glass12;
+            this.pictureBox1.InitialImage = global::WinFormsAppGipTesting.Properties.Resources.magnifying_glass;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(68, 58);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "  Search for problems.";
+            this.txtSearch.Size = new System.Drawing.Size(267, 23);
+            this.txtSearch.TabIndex = 9;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dataGridView
             // 
@@ -173,11 +222,29 @@ namespace WinFormsAppGipTesting
             this.dataGridView.AllowUserToResizeRows = false;
             this.dataGridView.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(35, 137);
+            this.dataGridView.ColumnHeadersVisible = false;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Problems});
+            this.dataGridView.GridColor = System.Drawing.Color.Silver;
+            this.dataGridView.Location = new System.Drawing.Point(35, 141);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowTemplate.Height = 25;
-            this.dataGridView.Size = new System.Drawing.Size(300, 150);
+            this.dataGridView.ShowCellErrors = false;
+            this.dataGridView.ShowEditingIcon = false;
+            this.dataGridView.ShowRowErrors = false;
+            this.dataGridView.Size = new System.Drawing.Size(300, 167);
             this.dataGridView.TabIndex = 8;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+            // 
+            // Problems
+            // 
+            this.Problems.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Problems.DataPropertyName = "problem";
+            this.Problems.HeaderText = "Problems";
+            this.Problems.Name = "Problems";
+            this.Problems.ReadOnly = true;
             // 
             // FormProblem
             // 
@@ -190,12 +257,12 @@ namespace WinFormsAppGipTesting
             this.Name = "FormProblem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TroubleFinder™";
-            this.Load += new System.EventHandler(this.FormHardwareIndex_Load);
             this.Shown += new System.EventHandler(this.FormProblem_Shown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -204,14 +271,19 @@ namespace WinFormsAppGipTesting
         #endregion
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCategoryTitle;
-        private System.Windows.Forms.ListBox lstProblems;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSolution;
-        private System.Windows.Forms.Button btnGetSolution;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAdminPanel;
         private System.Windows.Forms.Label lblCategoryHeader;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Problems;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbSubCategory;
+        private System.Windows.Forms.TextBox txtCategory;
     }
 }
