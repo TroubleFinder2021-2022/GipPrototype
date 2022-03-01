@@ -34,11 +34,9 @@ namespace WinFormsAppGipTesting
             this.btnSoftware = new System.Windows.Forms.Button();
             this.pictbxHardware = new System.Windows.Forms.PictureBox();
             this.pictbxSoftware = new System.Windows.Forms.PictureBox();
-            this.button = new System.Windows.Forms.Button();
             this.btnSecret = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAdminPanel = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.lblText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,9 +55,10 @@ namespace WinFormsAppGipTesting
             this.btnHardware.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnHardware.FlatAppearance.BorderSize = 0;
             this.btnHardware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHardware.Location = new System.Drawing.Point(173, 280);
+            this.btnHardware.Location = new System.Drawing.Point(198, 373);
+            this.btnHardware.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHardware.Name = "btnHardware";
-            this.btnHardware.Size = new System.Drawing.Size(200, 50);
+            this.btnHardware.Size = new System.Drawing.Size(229, 67);
             this.btnHardware.TabIndex = 1;
             this.btnHardware.Text = "Hardware";
             this.btnHardware.UseVisualStyleBackColor = false;
@@ -71,9 +70,10 @@ namespace WinFormsAppGipTesting
             this.btnSoftware.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnSoftware.FlatAppearance.BorderSize = 0;
             this.btnSoftware.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSoftware.Location = new System.Drawing.Point(394, 280);
+            this.btnSoftware.Location = new System.Drawing.Point(450, 373);
+            this.btnSoftware.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSoftware.Name = "btnSoftware";
-            this.btnSoftware.Size = new System.Drawing.Size(200, 50);
+            this.btnSoftware.Size = new System.Drawing.Size(229, 67);
             this.btnSoftware.TabIndex = 2;
             this.btnSoftware.Text = "Software";
             this.btnSoftware.UseVisualStyleBackColor = false;
@@ -83,9 +83,10 @@ namespace WinFormsAppGipTesting
             // 
             this.pictbxHardware.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictbxHardware.Image = global::WinFormsAppGipTesting.Properties.Resources.iconsHard1;
-            this.pictbxHardware.Location = new System.Drawing.Point(173, 61);
+            this.pictbxHardware.Location = new System.Drawing.Point(198, 81);
+            this.pictbxHardware.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictbxHardware.Name = "pictbxHardware";
-            this.pictbxHardware.Size = new System.Drawing.Size(200, 200);
+            this.pictbxHardware.Size = new System.Drawing.Size(229, 267);
             this.pictbxHardware.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictbxHardware.TabIndex = 3;
             this.pictbxHardware.TabStop = false;
@@ -94,19 +95,13 @@ namespace WinFormsAppGipTesting
             // 
             this.pictbxSoftware.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictbxSoftware.Image = global::WinFormsAppGipTesting.Properties.Resources.iconsSoft;
-            this.pictbxSoftware.Location = new System.Drawing.Point(394, 61);
+            this.pictbxSoftware.Location = new System.Drawing.Point(450, 81);
+            this.pictbxSoftware.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictbxSoftware.Name = "pictbxSoftware";
-            this.pictbxSoftware.Size = new System.Drawing.Size(200, 200);
+            this.pictbxSoftware.Size = new System.Drawing.Size(229, 267);
             this.pictbxSoftware.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictbxSoftware.TabIndex = 4;
             this.pictbxSoftware.TabStop = false;
-            // 
-            // button
-            // 
-            this.button.Location = new System.Drawing.Point(0, 0);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(75, 23);
-            this.button.TabIndex = 32;
             // 
             // btnSecret
             // 
@@ -115,9 +110,10 @@ namespace WinFormsAppGipTesting
             this.btnSecret.FlatAppearance.BorderSize = 0;
             this.btnSecret.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSecret.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSecret.Location = new System.Drawing.Point(12, 527);
+            this.btnSecret.Location = new System.Drawing.Point(14, 703);
+            this.btnSecret.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSecret.Name = "btnSecret";
-            this.btnSecret.Size = new System.Drawing.Size(95, 22);
+            this.btnSecret.Size = new System.Drawing.Size(109, 29);
             this.btnSecret.TabIndex = 6;
             this.btnSecret.Text = "Secret Button";
             this.btnSecret.UseVisualStyleBackColor = false;
@@ -127,13 +123,13 @@ namespace WinFormsAppGipTesting
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel2.Controls.Add(this.btnAdminPanel);
-            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.lblText);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(884, 50);
+            this.panel2.Size = new System.Drawing.Size(1010, 67);
             this.panel2.TabIndex = 31;
             // 
             // btnAdminPanel
@@ -142,26 +138,14 @@ namespace WinFormsAppGipTesting
             this.btnAdminPanel.BackColor = System.Drawing.Color.White;
             this.btnAdminPanel.FlatAppearance.BorderSize = 0;
             this.btnAdminPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdminPanel.Location = new System.Drawing.Point(789, 12);
+            this.btnAdminPanel.Location = new System.Drawing.Point(902, 16);
+            this.btnAdminPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdminPanel.Name = "btnAdminPanel";
-            this.btnAdminPanel.Size = new System.Drawing.Size(83, 25);
+            this.btnAdminPanel.Size = new System.Drawing.Size(95, 33);
             this.btnAdminPanel.TabIndex = 7;
             this.btnAdminPanel.Text = "Admin Panel";
             this.btnAdminPanel.UseVisualStyleBackColor = false;
             this.btnAdminPanel.Click += new System.EventHandler(this.btnAdminPanel_Click_1);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.BackColor = System.Drawing.Color.White;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(1476, 12);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(80, 25);
-            this.btnBack.TabIndex = 6;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
             // 
             // btnLogOut
             // 
@@ -169,9 +153,10 @@ namespace WinFormsAppGipTesting
             this.btnLogOut.BackColor = System.Drawing.Color.White;
             this.btnLogOut.FlatAppearance.BorderSize = 0;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Location = new System.Drawing.Point(2160, 12);
+            this.btnLogOut.Location = new System.Drawing.Point(2469, 16);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(80, 25);
+            this.btnLogOut.Size = new System.Drawing.Size(91, 33);
             this.btnLogOut.TabIndex = 5;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -179,9 +164,9 @@ namespace WinFormsAppGipTesting
             // lblText
             // 
             this.lblText.AutoSize = true;
-            this.lblText.Location = new System.Drawing.Point(15, 17);
+            this.lblText.Location = new System.Drawing.Point(17, 23);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(40, 15);
+            this.lblText.Size = new System.Drawing.Size(50, 20);
             this.lblText.TabIndex = 1;
             this.lblText.Text = "Home";
             // 
@@ -196,9 +181,10 @@ namespace WinFormsAppGipTesting
             this.panel1.Controls.Add(this.pictbxHardware);
             this.panel1.Controls.Add(this.btnSoftware);
             this.panel1.Controls.Add(this.btnHardware);
-            this.panel1.Location = new System.Drawing.Point(50, 100);
+            this.panel1.Location = new System.Drawing.Point(57, 133);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 400);
+            this.panel1.Size = new System.Drawing.Size(886, 533);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -206,9 +192,9 @@ namespace WinFormsAppGipTesting
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(685, 384);
+            this.label2.Location = new System.Drawing.Point(766, 502);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(106, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "By Ilias and Loïc";
             // 
@@ -218,9 +204,9 @@ namespace WinFormsAppGipTesting
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.SlateGray;
-            this.label1.Location = new System.Drawing.Point(327, 59);
+            this.label1.Location = new System.Drawing.Point(374, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 36);
+            this.label1.Size = new System.Drawing.Size(267, 46);
             this.label1.TabIndex = 33;
             this.label1.Text = "TroubleFinder™";
             // 
@@ -231,9 +217,10 @@ namespace WinFormsAppGipTesting
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnClose.Location = new System.Drawing.Point(777, 527);
+            this.btnClose.Location = new System.Drawing.Point(888, 703);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(95, 22);
+            this.btnClose.Size = new System.Drawing.Size(109, 29);
             this.btnClose.TabIndex = 34;
             this.btnClose.Text = "Exit Application";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -242,16 +229,16 @@ namespace WinFormsAppGipTesting
             // FormIndex
             // 
             this.AccessibleName = "test";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(1010, 748);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnSecret);
-            this.Controls.Add(this.button);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormIndex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TroubleFinder™";
@@ -271,10 +258,8 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Button btnSoftware;
         private System.Windows.Forms.PictureBox pictbxHardware;
         private System.Windows.Forms.PictureBox pictbxSoftware;
-        private System.Windows.Forms.Button button;
         private System.Windows.Forms.Button btnSecret;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.Button btnAdminPanel;
