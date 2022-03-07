@@ -115,6 +115,7 @@ namespace WinFormsAppGipTesting
             // 
             this.txtNewPassword.Location = new System.Drawing.Point(50, 212);
             this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.Size = new System.Drawing.Size(300, 23);
             this.txtNewPassword.TabIndex = 12;
             // 
@@ -131,6 +132,7 @@ namespace WinFormsAppGipTesting
             // 
             this.txtOldPassword.Location = new System.Drawing.Point(50, 136);
             this.txtOldPassword.Name = "txtOldPassword";
+            this.txtOldPassword.PasswordChar = '*';
             this.txtOldPassword.Size = new System.Drawing.Size(300, 23);
             this.txtOldPassword.TabIndex = 10;
             // 
