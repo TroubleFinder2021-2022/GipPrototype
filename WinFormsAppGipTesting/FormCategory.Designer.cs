@@ -38,7 +38,7 @@ namespace WinFormsAppGipTesting
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
-            this.txtProblem = new System.Windows.Forms.TextBox();
+            this.txtSubCategory = new System.Windows.Forms.TextBox();
             this.lblProblem = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,6 +68,7 @@ namespace WinFormsAppGipTesting
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnBack
             // 
@@ -100,7 +101,7 @@ namespace WinFormsAppGipTesting
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.cmbCategory);
             this.panel2.Controls.Add(this.lblCategory);
-            this.panel2.Controls.Add(this.txtProblem);
+            this.panel2.Controls.Add(this.txtSubCategory);
             this.panel2.Controls.Add(this.lblProblem);
             this.panel2.Location = new System.Drawing.Point(40, 100);
             this.panel2.Name = "panel2";
@@ -118,6 +119,7 @@ namespace WinFormsAppGipTesting
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cmbCategory
             // 
@@ -136,12 +138,12 @@ namespace WinFormsAppGipTesting
             this.lblCategory.TabIndex = 4;
             this.lblCategory.Text = "Category";
             // 
-            // txtProblem
+            // txtSubCategory
             // 
-            this.txtProblem.Location = new System.Drawing.Point(46, 76);
-            this.txtProblem.Name = "txtProblem";
-            this.txtProblem.Size = new System.Drawing.Size(323, 23);
-            this.txtProblem.TabIndex = 1;
+            this.txtSubCategory.Location = new System.Drawing.Point(46, 76);
+            this.txtSubCategory.Name = "txtSubCategory";
+            this.txtSubCategory.Size = new System.Drawing.Size(323, 23);
+            this.txtSubCategory.TabIndex = 1;
             // 
             // lblProblem
             // 
@@ -157,12 +159,15 @@ namespace WinFormsAppGipTesting
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TroubleFinder™";
+            this.Load += new System.EventHandler(this.FormCategory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -181,7 +186,7 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.TextBox txtProblem;
+        private System.Windows.Forms.TextBox txtSubCategory;
         private System.Windows.Forms.Label lblProblem;
     }
 }

@@ -10,9 +10,12 @@ namespace WinFormsAppGipTesting
 {
     public partial class FormCategoryManagement : Form
     {
+        FormCategory form;
+
         public FormCategoryManagement()
         {
             InitializeComponent();
+            form = new FormCategory(this);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -54,7 +57,8 @@ namespace WinFormsAppGipTesting
 
         private void btnNewSubCat_Click(object sender, EventArgs e)
         {
-
+            form.Clear();
+            form.ShowDialog();
         }
     }
 }

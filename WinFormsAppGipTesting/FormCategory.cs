@@ -10,9 +10,56 @@ namespace WinFormsAppGipTesting
 {
     public partial class FormCategory: Form
     {
-        public FormCategory()
+        private readonly FormCategoryManagement _parent;
+
+        public FormCategory(FormCategoryManagement parent)
         {
             InitializeComponent();
+            _parent = parent;
+
+            DbSolution.LoadCategories("SELECT * FROM category;", "name", cmbCategory);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        public void Clear()
+        {
+            txtSubCategory.Text = string.Empty;
+            cmbCategory.SelectedIndex = -1;
+        }
+
+        private void FormCategory_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (txtSubCategory.Text.Trim().Length < 3)
+            {
+                MessageBox.Show("Solution is empty.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (cmbCategory.SelectedIndex == -1)
+            {
+                MessageBox.Show("Category selection is empty.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            else
+            {
+                if (MessageBox.Show($"Are you sure you want to add {txtSubCategory.Text} as a new subcategory?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //query
+                }
+                else
+                {
+                    return;
+                }
+            }
         }
     }
 }

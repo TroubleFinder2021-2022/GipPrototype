@@ -206,5 +206,25 @@ namespace WinFormsAppGipTesting
             form.Clear();
             con.Close();
         }
+        /*
+        public static void AddSubcategory(string strName, string strCategoryID)
+        {
+            string strSql = "INSERT INTO solutions VALUES (NULL, @SolProblem, @SolSolution, @SolCategory, @SolSubCategory)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(strSql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@SolProblem", MySqlDbType.VarChar).Value = sol.problem;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Solution added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Solution could not be added. \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
+        */
     }
 }
