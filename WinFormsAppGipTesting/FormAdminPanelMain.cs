@@ -54,6 +54,13 @@ namespace WinFormsAppGipTesting
             this.Close();
         }
 
+        private void btnCategoryManagement_Click(object sender, EventArgs e)
+        {
+            FormCategoryManagement formCategoryManagement = new FormCategoryManagement();
+            formCategoryManagement.Show();
+            this.Close();
+        }
+
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
@@ -65,6 +72,5 @@ namespace WinFormsAppGipTesting
             }
         }
 
-       
     }
 }

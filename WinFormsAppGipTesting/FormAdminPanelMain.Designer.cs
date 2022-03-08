@@ -36,6 +36,7 @@ namespace WinFormsAppGipTesting
             this.btnLogOut = new System.Windows.Forms.Button();
             this.lblText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCategoryManagement = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,12 +50,10 @@ namespace WinFormsAppGipTesting
             // 
             // btnSolutionManager
             // 
-            this.btnSolutionManager.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSolutionManager.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnSolutionManager.FlatAppearance.BorderSize = 0;
             this.btnSolutionManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolutionManager.Location = new System.Drawing.Point(304, 31);
+            this.btnSolutionManager.Location = new System.Drawing.Point(150, 31);
             this.btnSolutionManager.Name = "btnSolutionManager";
             this.btnSolutionManager.Size = new System.Drawing.Size(200, 30);
             this.btnSolutionManager.TabIndex = 7;
@@ -102,6 +101,7 @@ namespace WinFormsAppGipTesting
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCategoryManagement);
             this.panel1.Controls.Add(this.btnSolutionManager);
             this.panel1.Controls.Add(this.dataGridView);
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -109,6 +109,20 @@ namespace WinFormsAppGipTesting
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 400);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCategoryManagement
+            // 
+            this.btnCategoryManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCategoryManagement.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnCategoryManagement.FlatAppearance.BorderSize = 0;
+            this.btnCategoryManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoryManagement.Location = new System.Drawing.Point(425, 31);
+            this.btnCategoryManagement.Name = "btnCategoryManagement";
+            this.btnCategoryManagement.Size = new System.Drawing.Size(200, 30);
+            this.btnCategoryManagement.TabIndex = 9;
+            this.btnCategoryManagement.Text = "Manage Categories";
+            this.btnCategoryManagement.UseVisualStyleBackColor = false;
+            this.btnCategoryManagement.Click += new System.EventHandler(this.btnCategoryManagement_Click);
             // 
             // dataGridView
             // 
@@ -225,5 +239,6 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
+        private System.Windows.Forms.Button btnCategoryManagement;
     }
 }
