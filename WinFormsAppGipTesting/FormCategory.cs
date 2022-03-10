@@ -17,7 +17,7 @@ namespace WinFormsAppGipTesting
             InitializeComponent();
             _parent = parent;
 
-            DbSolution.LoadCategories("SELECT * FROM category;", "name", cmbCategory);
+            DbSolution.LoadCategories("SELECT * FROM category;", "title", cmbCategory);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

@@ -42,17 +42,33 @@ namespace WinFormsAppGipTesting
         private void FormCategoryManagement_Load(object sender, EventArgs e)
         {
             DbSolution.DisplayAndSearchSolution("SELECT * FROM category", dataGridViewCat);
-            DbSolution.DisplayAndSearchSolution("SELECT * FROM subcategory", dataGridViewSubCat);
+            DbSolution.DisplayAndSearchSolution("SELECT title, category_id FROM subcategory", dataGridViewSubCat);
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            DbSolution.DisplayAndSearchSolution("SELECT * FROM subcategory WHERE name LIKE '%" + txtSearch.Text + "%'", dataGridViewSubCat);
+            DbSolution.DisplayAndSearchSolution("SELECT title, category_id FROM subcategory WHERE title LIKE '%" + txtSearch.Text + "%'", dataGridViewSubCat);
         }
 
         private void dataGridViewSubCat_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            // change category id into category name
+            if (e.ColumnIndex == 1)
+            {
+                e.FormattingApplied = true;
+                string strTemp = dataGridViewSubCat.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                switch (strTemp)
+                {
+                    case "0":
+                        e.Value = "Hardware";
+                        break;
+                    case "1":
+                        e.Value = "Software";
+                        break;
+                    default:
+                        e.Value = "N/A";
+                        break;
+                }
+            }
         }
 
         private void btnNewSubCat_Click(object sender, EventArgs e)

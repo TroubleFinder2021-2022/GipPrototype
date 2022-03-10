@@ -18,8 +18,8 @@ namespace WinFormsAppGipTesting
             InitializeComponent();
             _parent = parent;
 
-            DbSolution.LoadCategories("SELECT * FROM category;", "name", cmbCategory);
-            DbSolution.LoadCategories("SELECT * FROM subcategory;", "name", cmbSubcategory);
+            DbSolution.LoadCategories("SELECT * FROM category;", "title", cmbCategory);
+            DbSolution.LoadCategories("SELECT * FROM subcategory;", "title", cmbSubcategory);
         }
 
         private void FormSolution_Load(object sender, EventArgs e)

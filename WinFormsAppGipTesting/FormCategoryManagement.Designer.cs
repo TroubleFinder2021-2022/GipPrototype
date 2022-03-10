@@ -29,6 +29,7 @@ namespace WinFormsAppGipTesting
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategoryManagement));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@ namespace WinFormsAppGipTesting
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnNewSubCat = new System.Windows.Forms.Button();
             this.dataGridViewSubCat = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCat = new System.Windows.Forms.DataGridView();
@@ -167,7 +167,6 @@ namespace WinFormsAppGipTesting
             this.dataGridViewSubCat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewSubCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSubCat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
             this.Column4,
             this.Column5});
             this.dataGridViewSubCat.GridColor = System.Drawing.SystemColors.InactiveCaption;
@@ -182,21 +181,11 @@ namespace WinFormsAppGipTesting
             this.dataGridViewSubCat.TabIndex = 1;
             this.dataGridViewSubCat.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewSubCat_CellFormatting);
             // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.DataPropertyName = "subcategory_id";
-            this.Column3.FillWeight = 58.38832F;
-            this.Column3.HeaderText = "ID";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 43;
-            // 
             // Column4
             // 
-            this.Column4.DataPropertyName = "name";
-            this.Column4.FillWeight = 104.5558F;
-            this.Column4.HeaderText = "SubCategory";
+            this.Column4.DataPropertyName = "title";
+            this.Column4.FillWeight = 131.2307F;
+            this.Column4.HeaderText = "Subcategory";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
@@ -204,8 +193,8 @@ namespace WinFormsAppGipTesting
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column5.DataPropertyName = "category_id";
-            this.Column5.FillWeight = 137.0558F;
-            this.Column5.HeaderText = "Category ID";
+            this.Column5.FillWeight = 110.3809F;
+            this.Column5.HeaderText = "Category";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Width = 94;
@@ -230,6 +219,14 @@ namespace WinFormsAppGipTesting
             this.dataGridViewCat.Location = new System.Drawing.Point(30, 90);
             this.dataGridViewCat.Name = "dataGridViewCat";
             this.dataGridViewCat.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCat.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCat.RowHeadersVisible = false;
             this.dataGridViewCat.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewCat.RowTemplate.Height = 25;
@@ -249,7 +246,7 @@ namespace WinFormsAppGipTesting
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "name";
+            this.Column2.DataPropertyName = "title";
             this.Column2.FillWeight = 156.3452F;
             this.Column2.HeaderText = "Category";
             this.Column2.Name = "Column2";
@@ -287,13 +284,12 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridViewCat;
         private System.Windows.Forms.DataGridView dataGridViewSubCat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button btnNewSubCat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

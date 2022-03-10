@@ -58,11 +58,11 @@ namespace WinFormsAppGipTesting
             DbSolution.DisplayAndSearchSolution($"SELECT problem FROM solutions WHERE category = '{strCategory}';", dataGridView);
             if (txtCategory.Text == "Hardware")
             {
-                DbSolution.LoadCategories($"SELECT * FROM subcategory WHERE category_id = {0};", "name", cmbSubCategory);
+                DbSolution.LoadCategories($"SELECT * FROM subcategory WHERE category_id = {0};", "title", cmbSubCategory);
             }
             else if (txtCategory.Text == "Software")
             {
-                DbSolution.LoadCategories($"SELECT * FROM subcategory WHERE category_id = {1};", "name", cmbSubCategory);
+                DbSolution.LoadCategories($"SELECT * FROM subcategory WHERE category_id = {1};", "title", cmbSubCategory);
             }
 
         }
