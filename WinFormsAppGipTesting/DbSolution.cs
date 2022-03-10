@@ -209,7 +209,7 @@ namespace WinFormsAppGipTesting
         /*
         public static void AddSubcategory(string strName, string strCategoryID)
         {
-            string strSql = "INSERT INTO solutions VALUES (NULL, @SolProblem, @SolSolution, @SolCategory, @SolSubCategory)";
+            string strSql = "INSERT INTO subcategory VALUES (NULL, @CatTitle)";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(strSql, con);
             cmd.CommandType = CommandType.Text;
