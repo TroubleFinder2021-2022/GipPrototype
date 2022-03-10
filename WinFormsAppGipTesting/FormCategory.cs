@@ -51,14 +51,29 @@ namespace WinFormsAppGipTesting
 
             else
             {
-                if (MessageBox.Show($"Are you sure you want to add {txtSubCategory.Text} as a new subcategory?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show($"Are you sure you want to add '{txtSubCategory.Text}' as a new subcategory?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //query
+                    string strCategoryID = cmbCategory.SelectedItem.ToString();
+                    int intCategoryID = 0;
+
+                    if (strCategoryID == "Hardware")
+                    {
+                        intCategoryID = 0;
+                    }
+                    else if (strCategoryID == "Software")
+                    {
+                        intCategoryID = 1;
+                    }
+
+                    Subcategory subcategory = new Subcategory(txtSubCategory.Text.Trim(), intCategoryID);
+                    DbSolution.AddSubcategory(subcategory);
+                    Clear();
                 }
                 else
                 {
                     return;
                 }
+                _parent.Display();
             }
         }
     }

@@ -113,7 +113,7 @@ namespace WinFormsAppGipTesting
             this.btnAdd.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(46, 217);
+            this.btnAdd.Location = new System.Drawing.Point(38, 215);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(323, 30);
             this.btnAdd.TabIndex = 8;
@@ -124,7 +124,7 @@ namespace WinFormsAppGipTesting
             // cmbCategory
             // 
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(46, 144);
+            this.cmbCategory.Location = new System.Drawing.Point(38, 142);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(323, 23);
             this.cmbCategory.TabIndex = 5;
@@ -132,7 +132,7 @@ namespace WinFormsAppGipTesting
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(46, 124);
+            this.lblCategory.Location = new System.Drawing.Point(38, 122);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(55, 15);
             this.lblCategory.TabIndex = 4;
@@ -140,7 +140,7 @@ namespace WinFormsAppGipTesting
             // 
             // txtSubCategory
             // 
-            this.txtSubCategory.Location = new System.Drawing.Point(46, 76);
+            this.txtSubCategory.Location = new System.Drawing.Point(38, 74);
             this.txtSubCategory.Name = "txtSubCategory";
             this.txtSubCategory.Size = new System.Drawing.Size(323, 23);
             this.txtSubCategory.TabIndex = 1;
@@ -148,7 +148,7 @@ namespace WinFormsAppGipTesting
             // lblProblem
             // 
             this.lblProblem.AutoSize = true;
-            this.lblProblem.Location = new System.Drawing.Point(46, 58);
+            this.lblProblem.Location = new System.Drawing.Point(38, 56);
             this.lblProblem.Name = "lblProblem";
             this.lblProblem.Size = new System.Drawing.Size(106, 15);
             this.lblProblem.TabIndex = 0;

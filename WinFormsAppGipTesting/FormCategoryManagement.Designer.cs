@@ -40,11 +40,11 @@ namespace WinFormsAppGipTesting
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnNewSubCat = new System.Windows.Forms.Button();
             this.dataGridViewSubCat = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCat = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -181,24 +181,6 @@ namespace WinFormsAppGipTesting
             this.dataGridViewSubCat.TabIndex = 1;
             this.dataGridViewSubCat.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewSubCat_CellFormatting);
             // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "title";
-            this.Column4.FillWeight = 131.2307F;
-            this.Column4.HeaderText = "Subcategory";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.DataPropertyName = "category_id";
-            this.Column5.FillWeight = 110.3809F;
-            this.Column5.HeaderText = "Category";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 94;
-            // 
             // dataGridViewCat
             // 
             this.dataGridViewCat.AllowUserToAddRows = false;
@@ -251,6 +233,24 @@ namespace WinFormsAppGipTesting
             this.Column2.HeaderText = "Category";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "title";
+            this.Column4.FillWeight = 131.2307F;
+            this.Column4.HeaderText = "Subcategory";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.DataPropertyName = "category_id";
+            this.Column5.FillWeight = 110.3809F;
+            this.Column5.HeaderText = "Category";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 80;
             // 
             // FormCategoryManagement
             // 

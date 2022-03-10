@@ -41,11 +41,17 @@ namespace WinFormsAppGipTesting
 
         private void FormCategoryManagement_Load(object sender, EventArgs e)
         {
+            Display();
+        }
+
+        public void Display()
+        {
             DbSolution.DisplayAndSearchSolution("SELECT * FROM category", dataGridViewCat);
             DbSolution.DisplayAndSearchSolution("SELECT title, category_id FROM subcategory", dataGridViewSubCat);
         }
+        
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+            private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             DbSolution.DisplayAndSearchSolution("SELECT title, category_id FROM subcategory WHERE title LIKE '%" + txtSearch.Text + "%'", dataGridViewSubCat);
         }

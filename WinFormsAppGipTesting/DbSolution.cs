@@ -206,25 +206,25 @@ namespace WinFormsAppGipTesting
             form.Clear();
             con.Close();
         }
-        /*
-        public static void AddSubcategory(string strName, string strCategoryID)
+
+        public static void AddSubcategory(Subcategory subcategory)
         {
-            string strSql = "INSERT INTO subcategory VALUES (NULL, @CatTitle)";
+            string strSql = "INSERT INTO subcategory VALUES (NULL, @SubcategoryTitle, @SubcategoryID)";
             MySqlConnection con = GetConnection();
             MySqlCommand cmd = new MySqlCommand(strSql, con);
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("@SolProblem", MySqlDbType.VarChar).Value = sol.problem;
+            cmd.Parameters.Add("@SubcategoryTitle", MySqlDbType.VarChar).Value = subcategory.strSubcategory;
+            cmd.Parameters.Add("@SubcategoryID", MySqlDbType.Int32).Value = subcategory.intSubcategoryID;
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Solution added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Subcategory added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Solution could not be added. \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Subcategory could not be added. \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             con.Close();
         }
-        */
     }
 }
