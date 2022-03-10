@@ -59,7 +59,11 @@ namespace WinFormsAppGipTesting
             MessageBox.Show("No secrets are currently available.", ";)", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
-
+        private void btnSecret_MouseHover(object sender, EventArgs e)
+        {
+            btnSecret.BackColor = Color.White;
+            btnSecret.Text = "Secret Button";
+        }
     }
 }
 
