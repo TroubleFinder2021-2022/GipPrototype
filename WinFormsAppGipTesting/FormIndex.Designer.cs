@@ -29,6 +29,7 @@ namespace WinFormsAppGipTesting
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIndex));
             this.btnHardware = new System.Windows.Forms.Button();
             this.btnSoftware = new System.Windows.Forms.Button();
@@ -43,10 +44,14 @@ namespace WinFormsAppGipTesting
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timerClock = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictbxHardware)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictbxSoftware)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnHardware
@@ -101,14 +106,15 @@ namespace WinFormsAppGipTesting
             // 
             // btnSecret
             // 
-            this.btnSecret.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSecret.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSecret.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSecret.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnSecret.FlatAppearance.BorderSize = 0;
             this.btnSecret.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSecret.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSecret.Location = new System.Drawing.Point(12, 527);
+            this.btnSecret.Location = new System.Drawing.Point(383, 0);
             this.btnSecret.Name = "btnSecret";
-            this.btnSecret.Size = new System.Drawing.Size(95, 22);
+            this.btnSecret.Size = new System.Drawing.Size(95, 25);
             this.btnSecret.TabIndex = 6;
             this.btnSecret.UseVisualStyleBackColor = false;
             this.btnSecret.Click += new System.EventHandler(this.btnSecret_Click);
@@ -203,18 +209,45 @@ namespace WinFormsAppGipTesting
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnClose.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnClose.Location = new System.Drawing.Point(777, 527);
+            this.btnClose.Location = new System.Drawing.Point(0, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(95, 22);
+            this.btnClose.Size = new System.Drawing.Size(95, 25);
             this.btnClose.TabIndex = 34;
             this.btnClose.Text = "Exit Application";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel3.Controls.Add(this.lblTime);
+            this.panel3.Controls.Add(this.btnSecret);
+            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel3.Location = new System.Drawing.Point(0, 536);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(884, 25);
+            this.panel3.TabIndex = 35;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(828, 6);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(53, 13);
+            this.lblTime.TabIndex = 35;
+            this.lblTime.Text = "06:90 PM";
+            // 
+            // timerClock
+            // 
+            this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
             // 
             // FormIndex
             // 
@@ -222,9 +255,8 @@ namespace WinFormsAppGipTesting
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSecret);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -237,6 +269,8 @@ namespace WinFormsAppGipTesting
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,6 +290,9 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timerClock;
     }
 }
 

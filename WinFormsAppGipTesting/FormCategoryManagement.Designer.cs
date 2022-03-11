@@ -176,7 +176,6 @@ namespace WinFormsAppGipTesting
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewSubCat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSubCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSubCat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

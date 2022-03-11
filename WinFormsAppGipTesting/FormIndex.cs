@@ -18,7 +18,13 @@ namespace WinFormsAppGipTesting
             InitializeComponent();
             formHardwareIndex = new FormProblem(this);
 
+            timerClock.Enabled = true;
+            timerClock.Interval = 1000;
+        }
 
+        private void timerClock_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToShortTimeString();
         }
 
         private void btnHardware_Click(object sender, EventArgs e)
@@ -56,7 +62,10 @@ namespace WinFormsAppGipTesting
 
         private void btnSecret_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("No secrets are currently available.", ";)", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //MessageBox.Show("No secrets are currently available.", ";)", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            FormLoading formLoading = new FormLoading();
+            formLoading.Show();
+            this.Hide();
         }
 
         private void btnSecret_MouseHover(object sender, EventArgs e)
@@ -64,6 +73,8 @@ namespace WinFormsAppGipTesting
             btnSecret.BackColor = Color.White;
             btnSecret.Text = "Secret Button";
         }
+
+        
     }
 }
 
