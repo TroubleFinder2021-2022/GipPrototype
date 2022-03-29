@@ -41,7 +41,6 @@ namespace WinFormsAppGipTesting
             this.btnLogOut = new System.Windows.Forms.Button();
             this.lblText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -174,7 +173,6 @@ namespace WinFormsAppGipTesting
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictbxSoftware);
             this.panel1.Controls.Add(this.pictbxHardware);
             this.panel1.Controls.Add(this.btnSoftware);
@@ -183,17 +181,6 @@ namespace WinFormsAppGipTesting
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 400);
             this.panel1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(685, 380);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "By Ilias and Loïc";
             // 
             // label1
             // 
@@ -268,7 +255,6 @@ namespace WinFormsAppGipTesting
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -288,7 +274,6 @@ namespace WinFormsAppGipTesting
         private System.Windows.Forms.Button btnAdminPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTime;

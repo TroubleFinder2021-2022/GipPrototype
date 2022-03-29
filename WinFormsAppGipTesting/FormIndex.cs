@@ -62,10 +62,7 @@ namespace WinFormsAppGipTesting
 
         private void btnSecret_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("No secrets are currently available.", ";)", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            FormLoading formLoading = new FormLoading();
-            formLoading.Show();
-            this.Hide();
+            MessageBox.Show("No secrets are currently available.", ";)", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnSecret_MouseHover(object sender, EventArgs e)
