@@ -179,5 +179,15 @@ namespace WinFormsAppGipTesting.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vqjr2iR {
+            get {
+                object obj = ResourceManager.GetObject("Vqjr2iR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

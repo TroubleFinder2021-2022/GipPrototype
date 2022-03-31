@@ -39,9 +39,10 @@ namespace WinFormsAppGipTesting
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 41F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblTitle.Location = new System.Drawing.Point(-4, 43);
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Location = new System.Drawing.Point(92, 44);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(421, 71);
             this.lblTitle.TabIndex = 34;
@@ -53,20 +54,22 @@ namespace WinFormsAppGipTesting
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.progressBar1.Location = new System.Drawing.Point(50, 200);
+            this.progressBar1.Location = new System.Drawing.Point(50, 250);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(300, 23);
+            this.progressBar1.Size = new System.Drawing.Size(500, 23);
             this.progressBar1.TabIndex = 35;
             this.progressBar1.Visible = false;
             // 
             // btnStart
             // 
+            this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStart.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Location = new System.Drawing.Point(146, 200);
+            this.btnStart.Location = new System.Drawing.Point(239, 250);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(106, 23);
+            this.btnStart.Size = new System.Drawing.Size(128, 23);
             this.btnStart.TabIndex = 36;
             this.btnStart.Text = "Start Application";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -74,10 +77,13 @@ namespace WinFormsAppGipTesting
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(155, 125);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(357, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 37;
@@ -88,7 +94,9 @@ namespace WinFormsAppGipTesting
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(400, 300);
+            this.BackgroundImage = global::WinFormsAppGipTesting.Properties.Resources.Vqjr2iR;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(600, 350);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnStart);
