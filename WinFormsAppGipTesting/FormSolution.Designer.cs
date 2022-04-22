@@ -121,6 +121,7 @@ namespace WinFormsAppGipTesting
             this.cmbSubcategory.Name = "cmbSubcategory";
             this.cmbSubcategory.Size = new System.Drawing.Size(121, 23);
             this.cmbSubcategory.TabIndex = 7;
+            this.cmbSubcategory.Text = "Select a category";
             // 
             // lblSubcategory
             // 
@@ -138,6 +139,7 @@ namespace WinFormsAppGipTesting
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(121, 23);
             this.cmbCategory.TabIndex = 5;
+            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
             // 
             // lblCategory
             // 

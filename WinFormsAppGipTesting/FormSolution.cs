@@ -19,7 +19,8 @@ namespace WinFormsAppGipTesting
             _parent = parent;
 
             DbSolution.LoadCategories("SELECT * FROM category;", "title", cmbCategory);
-            DbSolution.LoadCategories("SELECT * FROM subcategory;", "title", cmbSubcategory);
+            //DbSolution.LoadCategories("SELECT * FROM subcategory;", "title", cmbSubcategory);
+
         }
 
         private void FormSolution_Load(object sender, EventArgs e)
@@ -30,6 +31,21 @@ namespace WinFormsAppGipTesting
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbSubcategory.Items.Clear();
+            cmbSubcategory.Text = "";
+            string strItem = cmbCategory.Text;
+            if (strItem == "Hardware")
+            {
+                DbSolution.LoadCategories($"SELECT * FROM subcategory WHERE category_id = {0};", "title", cmbSubcategory);
+            }
+            else if (strItem == "Software")
+            {
+                DbSolution.LoadCategories($"SELECT * FROM subcategory WHERE category_id = {1};", "title", cmbSubcategory);
+            }
         }
 
         public void UpdateInfo()
@@ -55,6 +71,7 @@ namespace WinFormsAppGipTesting
             txtSolution.Text = string.Empty;
             cmbCategory.SelectedIndex = -1;
             cmbSubcategory.SelectedIndex = -1;
+            cmbSubcategory.Text = "Select a category";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
