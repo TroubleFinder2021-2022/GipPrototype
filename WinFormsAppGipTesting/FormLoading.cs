@@ -12,14 +12,15 @@ namespace WinFormsAppGipTesting
     {
         public FormLoading()
         {
-            InitializeComponent();
-            
+            InitializeComponent(); 
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
             progressBar1.Visible = true;
             btnStart.Visible = false;
+
+            this.Cursor = Cursors.AppStarting;
 
             progressBar1.Value = 0;
             progressBar1.Minimum = 0;
@@ -30,7 +31,7 @@ namespace WinFormsAppGipTesting
             {
                 progressBar1.PerformStep();
             }
-
+            
             FormIndex formIndex = new FormIndex();
             formIndex.Show();
             this.Hide();
