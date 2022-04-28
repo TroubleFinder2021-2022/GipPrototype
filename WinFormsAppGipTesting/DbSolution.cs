@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace WinFormsAppGipTesting
 {
-    class DbSolution
+    class DbSolution 
     {
         public static MySqlConnection GetConnection()
         {
