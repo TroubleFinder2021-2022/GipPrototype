@@ -95,16 +95,16 @@ namespace WinFormsAppGipTesting
             // 
             this.txtSolution.BackColor = System.Drawing.Color.White;
             this.txtSolution.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtSolution.Enabled = false;
             this.txtSolution.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSolution.Location = new System.Drawing.Point(397, 58);
             this.txtSolution.Multiline = true;
             this.txtSolution.Name = "txtSolution";
             this.txtSolution.ReadOnly = true;
-            this.txtSolution.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtSolution.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSolution.Size = new System.Drawing.Size(300, 250);
             this.txtSolution.TabIndex = 6;
             this.txtSolution.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSolution.WordWrap = false;
             // 
             // panel2
             // 
