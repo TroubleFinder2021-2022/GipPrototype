@@ -178,6 +178,7 @@ namespace WinFormsAppGipTesting
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView.RowTemplate.Height = 25;
+            this.dataGridView.ShowCellToolTips = false;
             this.dataGridView.ShowEditingIcon = false;
             this.dataGridView.Size = new System.Drawing.Size(715, 280);
             this.dataGridView.TabIndex = 8;
